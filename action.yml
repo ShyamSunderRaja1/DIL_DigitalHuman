@@ -1,0 +1,12 @@
+name: DIL_DigitalHuman
+author: shyam
+description: Leaves a comment on an open PR matching a push event.
+inputs:
+  msg: 
+    description: Comment's message
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.msg }}
