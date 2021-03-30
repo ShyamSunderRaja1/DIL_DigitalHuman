@@ -29,7 +29,7 @@ jobs:
         rasa test nlu --cross-validation
         
     - name: post cross-val results to PR
-      uses: ShyamSunderRaja1/comment-on-pr@DIL_DigitalHuman
+      uses: ShyamSunderRaja1/DIL_DigitalHuman@main
     
       continue-on-error: true
       env:
