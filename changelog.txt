@@ -1,0 +1,35 @@
+TODOs
+================
+1. affirm workflow with intent + action to fill up is_affirmed and with which myself/person/org entity 
+    -> use form and slots?
+        + suitable for interview questions or timed examinations
+        + better for "locked-in" transactions where user should not breakway or timeout due to idle
+        - not suitable for chat/exploratory behavior where conversations may diverge
+    -> use actions.py? read last messages and attempt to extract entity?
+        + potential of more open decision making
+2. chitchat/ response selector / intent to only trigger if slot_was_set for is_user_exploring === true
+    during utter_bid_COE_asks_myself_myname_or_companyname, when user entered "company" ===> chitchat response :(
+    it should be ignored or at least rerouted if is_exploring==false
+3. implement fallback policy/intent and NLU pipeline to handle unrecognized intents
+4. add JS/HTML renderer for embedding interactive "utterances" e.g. flash cards, weather snippets, newslets
+    ~ weather API https://api.data.gov.sg/v1/environment/2-hour-weather-forecast' mapping against geolocation
+    ~ recommender "ad" / news injection
+5. summarize recent conversations in charts e.g. top 10 questions in last 5 days
+6. action.py API to call 3rd party ==> understand workflow handshake
+7. response to utter a greeting for name (if it has been set in a slot) or just do generic greeting if it has not been set
+8. implement <ENTER> function after each text
+
+DEFECTS
+****************
+8. if no story/rule exists to train an 'nonsensical(?) affirm', because there is no memorized next action,
+    it leads to TED policy to predict next action 'utter_acknowledge_affirm' with confidence 0.65
+    ==> how to 'block' or ignore this logic, and handle gracefully
+    i.e. bot should NOT utter_acknowledge_affirm if nothing to affirm, i.e. need a slot is_xxx == true OR 
+    actions.py can check for last messages 
+
+
+9. intents should always fall within the context of a story ---> we use Action_Validate_Affirm action to do the following:
+    -> 1. confirm all slots based on the current story
+        2. get last msg, and check for entities
+        3. check if entities r valid <---> check against specific slots for logic
+        4. set slots if logical, others dispatch a fallback message

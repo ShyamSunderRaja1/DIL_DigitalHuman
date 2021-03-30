@@ -1,0 +1,258 @@
+[
+  {
+    "text": "What are  the steps for claim submission",
+    "intent_response_key_target": "faq/faq_claim_process",
+    "intent_response_key_prediction": {
+      "name": "faq/faq_claim_family_member",
+      "confidence": 0.27988532185554504
+    }
+  },
+  {
+    "text": "what happened to my claim",
+    "intent_response_key_target": "faq/faq_claim_rejected",
+    "intent_response_key_prediction": {
+      "name": "faq/faq_claim_process",
+      "confidence": 0.40396642684936523
+    }
+  },
+  {
+    "text": "Cashless process",
+    "intent_response_key_target": "faq/faq_claim_LOG_letter",
+    "intent_response_key_prediction": {
+      "name": "faq/faq_claim_process",
+      "confidence": 0.9732018709182739
+    }
+  },
+  {
+    "text": "additional payment after LOG submission",
+    "intent_response_key_target": "faq/faq_claim_LOG_additonal_payment",
+    "intent_response_key_prediction": {
+      "name": "faq/faq_cancel_submitted_claim",
+      "confidence": 0.20228484272956848
+    }
+  },
+  {
+    "text": "Why the money I received is less than what I originally claimed",
+    "intent_response_key_target": "faq/faq_claim_partial",
+    "intent_response_key_prediction": {
+      "name": "faq/faq_claim_payment_not_received",
+      "confidence": 0.4264194965362549
+    }
+  },
+  {
+    "text": "can i [terminate] my existing claim",
+    "intent_response_key_target": "faq/faq_cancel_submitted_claim",
+    "intent_response_key_prediction": {
+      "name": "faq/faq_claim_family_member",
+      "confidence": 0.2517382800579071
+    }
+  },
+  {
+    "text": "i want to check submitted claim balance",
+    "intent_response_key_target": "faq/faq_check_claim_balance",
+    "intent_response_key_prediction": {
+      "name": "faq/faq_cancel_submitted_claim",
+      "confidence": 0.3273697793483734
+    }
+  },
+  {
+    "text": "Oh, do you mind checking the weather for me please?",
+    "intent_response_key_target": "chitchat/ask_weather",
+    "intent_response_key_prediction": {
+      "name": "chitchat/ask_botname",
+      "confidence": 0.9996091723442078
+    }
+  },
+  {
+    "text": "Why can't I claim the injection expense",
+    "intent_response_key_target": "faq/faq_claim_vaccine",
+    "intent_response_key_prediction": {
+      "name": "faq/faq_claim_partial",
+      "confidence": 0.5718343257904053
+    }
+  },
+  {
+    "text": "Can I claim my flu shot charges",
+    "intent_response_key_target": "faq/faq_claim_vaccine",
+    "intent_response_key_prediction": {
+      "name": "faq/faq_claim_LOG_letter",
+      "confidence": 0.20297864079475403
+    }
+  },
+  {
+    "text": "is my claim approved",
+    "intent_response_key_target": "faq/faq_check_claim_status",
+    "intent_response_key_prediction": {
+      "name": "faq/faq_claim_process",
+      "confidence": 0.18108868598937988
+    }
+  },
+  {
+    "text": "claim amount",
+    "intent_response_key_target": "faq/faq_check_claim_balance",
+    "intent_response_key_prediction": {
+      "name": "faq/faq_claim_partial",
+      "confidence": 0.8417174816131592
+    }
+  },
+  {
+    "text": "I don't want to pay for my hospital procedure. Can you help me with that",
+    "intent_response_key_target": "faq/faq_claim_LOG_letter",
+    "intent_response_key_prediction": {
+      "name": "faq/faq_claim_rejected",
+      "confidence": 0.2212211638689041
+    }
+  },
+  {
+    "text": "Do I get reimbursed if I have a immunization shot",
+    "intent_response_key_target": "faq/faq_claim_vaccine",
+    "intent_response_key_prediction": {
+      "name": "faq/faq_claim_covid19",
+      "confidence": 0.2587394416332245
+    }
+  },
+  {
+    "text": "I had a general health checkup last week. Can I claim it",
+    "intent_response_key_target": "faq/faq_claim_health_checkups",
+    "intent_response_key_prediction": {
+      "name": "faq/faq_claim_GP_visit",
+      "confidence": 0.4803338348865509
+    }
+  },
+  {
+    "text": "Doctor ordered some lab test during my last visit. How can I claim those",
+    "intent_response_key_target": "faq/faq_claim_health_checkups",
+    "intent_response_key_prediction": {
+      "name": "faq/faq_claim_GP_visit",
+      "confidence": 0.2630661427974701
+    }
+  },
+  {
+    "text": "covid 19",
+    "intent_response_key_target": "faq/faq_claim_covid19",
+    "intent_response_key_prediction": {
+      "name": "faq/faq_claim_payment_not_received",
+      "confidence": 0.24576780200004578
+    }
+  },
+  {
+    "text": "Tell me about yourself",
+    "intent_response_key_target": "chitchat/ask_botname",
+    "intent_response_key_prediction": {
+      "name": "chitchat/ask_weather",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "Did hospital request for any payment even with LOG",
+    "intent_response_key_target": "faq/faq_claim_LOG_additonal_payment",
+    "intent_response_key_prediction": {
+      "name": "faq/faq_claim_process",
+      "confidence": 0.26735952496528625
+    }
+  },
+  {
+    "text": "claim clinc visit",
+    "intent_response_key_target": "faq/faq_claim_specialist_visit",
+    "intent_response_key_prediction": {
+      "name": "faq/faq_claim_GP_visit",
+      "confidence": 0.40560731291770935
+    }
+  },
+  {
+    "text": "partial claim amount",
+    "intent_response_key_target": "faq/faq_claim_partial",
+    "intent_response_key_prediction": {
+      "name": "faq/faq_check_claim_balance",
+      "confidence": 0.33812108635902405
+    }
+  },
+  {
+    "text": "china virus infection claim",
+    "intent_response_key_target": "faq/faq_claim_covid19",
+    "intent_response_key_prediction": {
+      "name": "faq/faq_claim_GP_visit",
+      "confidence": 0.28548377752304077
+    }
+  },
+  {
+    "text": "i want to cancel my submitted claim",
+    "intent_response_key_target": "faq/faq_cancel_submitted_claim",
+    "intent_response_key_prediction": {
+      "name": "faq/faq_claim_process",
+      "confidence": 0.6197735071182251
+    }
+  },
+  {
+    "text": "who are you",
+    "intent_response_key_target": "chitchat/ask_botname",
+    "intent_response_key_prediction": {
+      "name": "chitchat/ask_weather",
+      "confidence": 0.9999986886978149
+    }
+  },
+  {
+    "text": "What should I do if my claim gets rejected",
+    "intent_response_key_target": "faq/faq_claim_rejected",
+    "intent_response_key_prediction": {
+      "name": "faq/faq_claim_process",
+      "confidence": 0.5184826850891113
+    }
+  },
+  {
+    "text": "May I dispute with claim decision",
+    "intent_response_key_target": "faq/faq_claim_rejected",
+    "intent_response_key_prediction": {
+      "name": "faq/faq_claim_process",
+      "confidence": 0.23997721076011658
+    }
+  },
+  {
+    "text": "amount to pay after LOG approval",
+    "intent_response_key_target": "faq/faq_claim_LOG_additonal_payment",
+    "intent_response_key_prediction": {
+      "name": "faq/faq_claim_LOG_letter",
+      "confidence": 0.21070651710033417
+    }
+  },
+  {
+    "text": "Is it okay that I submit the claim for my spouse",
+    "intent_response_key_target": "faq/faq_claim_family_member",
+    "intent_response_key_prediction": {
+      "name": "faq/faq_claim_rejected",
+      "confidence": 0.28446826338768005
+    }
+  },
+  {
+    "text": "Can I claim the medicine prescribed by my doctor",
+    "intent_response_key_target": "faq/faq_claim_health_checkups",
+    "intent_response_key_prediction": {
+      "name": "faq/faq_claim_vaccine",
+      "confidence": 0.19874504208564758
+    }
+  },
+  {
+    "text": "How come some of the expense are not claimable",
+    "intent_response_key_target": "faq/faq_claim_partial",
+    "intent_response_key_prediction": {
+      "name": "faq/faq_claim_vaccine",
+      "confidence": 0.7929850220680237
+    }
+  },
+  {
+    "text": "What I need to bring when I go to the GP",
+    "intent_response_key_target": "faq/faq_claim_GP_visit",
+    "intent_response_key_prediction": {
+      "name": "faq/faq_claim_process",
+      "confidence": 0.6858270764350891
+    }
+  },
+  {
+    "text": "stop claim",
+    "intent_response_key_target": "faq/faq_cancel_submitted_claim",
+    "intent_response_key_prediction": {
+      "name": "faq/faq_check_claim_balance",
+      "confidence": 0.22047391533851624
+    }
+  }
+]

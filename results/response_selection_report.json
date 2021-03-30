@@ -1,0 +1,190 @@
+{
+  "faq/faq_claim_specialist_visit": {
+    "precision": 1.0,
+    "recall": 0.8333333333333334,
+    "f1-score": 0.9090909090909091,
+    "support": 6,
+    "confused_with": {
+      "faq/faq_claim_GP_visit": 1
+    }
+  },
+  "faq/faq_claim_GP_visit": {
+    "precision": 0.6,
+    "recall": 0.8571428571428571,
+    "f1-score": 0.7058823529411764,
+    "support": 7,
+    "confused_with": {
+      "faq/faq_claim_process": 1
+    }
+  },
+  "faq/faq_claim_LOG_additonal_payment": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 3,
+    "confused_with": {
+      "faq/faq_cancel_submitted_claim": 1,
+      "faq/faq_claim_process": 1,
+      "faq/faq_claim_LOG_letter": 1
+    }
+  },
+  "faq/faq_claim_forms": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 10,
+    "confused_with": {}
+  },
+  "faq/faq_claim_process": {
+    "precision": 0.38461538461538464,
+    "recall": 0.8333333333333334,
+    "f1-score": 0.5263157894736842,
+    "support": 6,
+    "confused_with": {
+      "faq/faq_claim_family_member": 1
+    }
+  },
+  "faq/faq_claim_covid19": {
+    "precision": 0.8,
+    "recall": 0.6666666666666666,
+    "f1-score": 0.7272727272727272,
+    "support": 6,
+    "confused_with": {
+      "faq/faq_claim_payment_not_received": 1,
+      "faq/faq_claim_GP_visit": 1
+    }
+  },
+  "chitchat/ask_weather": {
+    "precision": 0.7777777777777778,
+    "recall": 0.875,
+    "f1-score": 0.823529411764706,
+    "support": 8,
+    "confused_with": {
+      "chitchat/ask_botname": 1
+    }
+  },
+  "faq/faq_claim_LOG_letter": {
+    "precision": 0.6666666666666666,
+    "recall": 0.6666666666666666,
+    "f1-score": 0.6666666666666666,
+    "support": 6,
+    "confused_with": {
+      "faq/faq_claim_rejected": 1,
+      "faq/faq_claim_process": 1
+    }
+  },
+  "faq/faq_claim_vaccine": {
+    "precision": 0.6666666666666666,
+    "recall": 0.5714285714285714,
+    "f1-score": 0.6153846153846153,
+    "support": 7,
+    "confused_with": {
+      "faq/faq_claim_LOG_letter": 1,
+      "faq/faq_claim_partial": 1
+    }
+  },
+  "faq/faq_claim_health_checkups": {
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1-score": 0.6666666666666666,
+    "support": 6,
+    "confused_with": {
+      "faq/faq_claim_GP_visit": 2,
+      "faq/faq_claim_vaccine": 1
+    }
+  },
+  "faq/faq_claims_panel_hospital_list": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 6,
+    "confused_with": {}
+  },
+  "faq/faq_claim_rejected": {
+    "precision": 0.7142857142857143,
+    "recall": 0.625,
+    "f1-score": 0.6666666666666666,
+    "support": 8,
+    "confused_with": {
+      "faq/faq_claim_process": 3
+    }
+  },
+  "faq/faq_cancel_submitted_claim": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 3,
+    "confused_with": {
+      "faq/faq_claim_family_member": 1,
+      "faq/faq_claim_process": 1,
+      "faq/faq_check_claim_balance": 1
+    }
+  },
+  "faq/faq_claim_partial": {
+    "precision": 0.6666666666666666,
+    "recall": 0.5714285714285714,
+    "f1-score": 0.6153846153846153,
+    "support": 7,
+    "confused_with": {
+      "faq/faq_check_claim_balance": 1,
+      "faq/faq_claim_payment_not_received": 1
+    }
+  },
+  "faq/faq_check_claim_balance": {
+    "precision": 0.3333333333333333,
+    "recall": 0.3333333333333333,
+    "f1-score": 0.3333333333333333,
+    "support": 3,
+    "confused_with": {
+      "faq/faq_cancel_submitted_claim": 1,
+      "faq/faq_claim_partial": 1
+    }
+  },
+  "faq/faq_claim_payment_not_received": {
+    "precision": 0.75,
+    "recall": 1.0,
+    "f1-score": 0.8571428571428571,
+    "support": 6,
+    "confused_with": {}
+  },
+  "chitchat/ask_botname": {
+    "precision": 0.6666666666666666,
+    "recall": 0.5,
+    "f1-score": 0.5714285714285715,
+    "support": 4,
+    "confused_with": {
+      "chitchat/ask_weather": 2
+    }
+  },
+  "faq/faq_claim_family_member": {
+    "precision": 0.75,
+    "recall": 0.8571428571428571,
+    "f1-score": 0.7999999999999999,
+    "support": 7,
+    "confused_with": {
+      "faq/faq_claim_rejected": 1
+    }
+  },
+  "faq/faq_check_claim_status": {
+    "precision": 1.0,
+    "recall": 0.6666666666666666,
+    "f1-score": 0.8,
+    "support": 3,
+    "confused_with": {
+      "faq/faq_claim_process": 1
+    }
+  },
+  "accuracy": 0.7142857142857143,
+  "macro avg": {
+    "precision": 0.6724567829830987,
+    "recall": 0.6503759398496239,
+    "f1-score": 0.6465665885903789,
+    "support": 112
+  },
+  "weighted avg": {
+    "precision": 0.7231625021803595,
+    "recall": 0.7142857142857143,
+    "f1-score": 0.7043105151519571,
+    "support": 112
+  }
+}

@@ -1,0 +1,2533 @@
+[
+  {
+    "text": "claim",
+    "entities": [
+      {
+        "start": 0,
+        "end": 5,
+        "value": "Claim",
+        "entity": "main_topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "May I know more about the claim",
+    "entities": [
+      {
+        "start": 26,
+        "end": 31,
+        "value": "Claim",
+        "entity": "main_topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Can I top up my insurance coverage",
+    "entities": [
+      {
+        "start": 16,
+        "end": 34,
+        "value": "Policy admin",
+        "entity": "main_topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Claim result",
+    "entities": [
+      {
+        "start": 6,
+        "end": 12,
+        "value": "Existing claim enquiry",
+        "entity": "claim_topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "When will you make payment",
+    "entities": [
+      {
+        "start": 19,
+        "end": 26,
+        "value": "Claim payment",
+        "entity": "claim_topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Payment when",
+    "entities": [
+      {
+        "start": 0,
+        "end": 7,
+        "value": "Claim payment",
+        "entity": "claim_topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Can I appeal for my claim rejected",
+    "entities": [
+      {
+        "start": 26,
+        "end": 34,
+        "value": "Claims dispute",
+        "entity": "claim_topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I went to a clinic and can I claim",
+    "entities": [
+      {
+        "start": 12,
+        "end": 18,
+        "value": "Outpatient",
+        "entity": "claim_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Any hospital charges not claimable",
+    "entities": [
+      {
+        "start": 4,
+        "end": 12,
+        "value": "Hospital",
+        "entity": "claim_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "claim_type",
+        "start": 4,
+        "end": 12,
+        "confidence_entity": 0.8495275378227234,
+        "value": "Hospital",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "claim_topic",
+        "start": 21,
+        "end": 24,
+        "confidence_entity": 0.5443700551986694,
+        "value": "not",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "What I need to do to claim for expense incurred during my overseas trip",
+    "entities": [
+      {
+        "start": 58,
+        "end": 66,
+        "value": "Travel",
+        "entity": "claim_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "medical checkup before hospitalization",
+    "entities": [
+      {
+        "start": 16,
+        "end": 38,
+        "value": "pre/post",
+        "entity": "is_inpatient"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "claim_type",
+        "start": 23,
+        "end": 38,
+        "confidence_entity": 0.8151098066870647,
+        "value": "Hospital",
+        "extractor": "CRFEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "claim_type",
+        "start": 23,
+        "end": 38,
+        "confidence_entity": 0.8865562677383423,
+        "value": "Hospital",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "what is the mailing address",
+    "entities": [
+      {
+        "start": 12,
+        "end": 19,
+        "value": "Post mail",
+        "entity": "submission_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "[post mail] can{\"entity\": \"submission_type\", \"value\": \"Post mail\"}",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "submission_type",
+        "start": 1,
+        "end": 10,
+        "confidence_entity": 0.8959680008855595,
+        "value": "Post mail",
+        "extractor": "CRFEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "submission_type",
+        "start": 55,
+        "end": 64,
+        "confidence_entity": 0.918324256901978,
+        "value": "Post mail",
+        "extractor": "CRFEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "submission_type",
+        "start": 1,
+        "end": 5,
+        "confidence_entity": 0.4796208441257477,
+        "value": "Post mail",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "submission_type",
+        "start": 55,
+        "end": 59,
+        "confidence_entity": 0.4790573716163635,
+        "value": "Post mail",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "bye",
+    "entities": [
+      {
+        "start": 0,
+        "end": 3,
+        "value": "bye",
+        "entity": "bye_syn"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "bye_syn",
+        "start": 0,
+        "end": 3,
+        "confidence_entity": 0.8521682024002075,
+        "value": "bye_syn",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "my name is thomas",
+    "entities": [
+      {
+        "start": 11,
+        "end": 17,
+        "value": "thomas",
+        "entity": "PERSON"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "xiao hua",
+    "entities": [
+      {
+        "start": 0,
+        "end": 8,
+        "value": "xiao hua",
+        "entity": "PERSON"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "email insurance@outlook.com",
+    "entities": [
+      {
+        "start": 6,
+        "end": 27,
+        "value": "insurance@outlook.com",
+        "entity": "email"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "submission_type",
+        "start": 0,
+        "end": 5,
+        "confidence_entity": 0.7212989185968995,
+        "value": "Email",
+        "extractor": "CRFEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "email",
+        "start": 6,
+        "end": 27,
+        "confidence_entity": 0.5823963291439118,
+        "value": "insurance@outlook.com",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "submission_type",
+        "start": 0,
+        "end": 5,
+        "confidence_entity": 0.9907121062278748,
+        "value": "Email",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "email",
+        "start": 6,
+        "end": 27,
+        "confidence_entity": 0.6878328919410706,
+        "value": "insurance@outlook.com",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Where can I find panel doctor near my place",
+    "entities": [
+      {
+        "start": 17,
+        "end": 29,
+        "value": "panel doctor",
+        "entity": "general_practioner_syn"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "is_panel_hospital",
+        "start": 17,
+        "end": 22,
+        "confidence_entity": 0.6792462468147278,
+        "value": "panel",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "corona treatment",
+    "entities": [
+      {
+        "start": 0,
+        "end": 6,
+        "value": "corona",
+        "entity": "coronavirus_syn"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "coronavirus_syn",
+        "start": 0,
+        "end": 6,
+        "confidence_entity": 0.30034488439559937,
+        "value": "coronavirus_syn",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "i want to do claim",
+    "entities": [
+      {
+        "start": 13,
+        "end": 18,
+        "value": "Claim",
+        "entity": "main_topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Insurance claim",
+    "entities": [
+      {
+        "start": 10,
+        "end": 15,
+        "value": "Claim",
+        "entity": "main_topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Quotation for new policy.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 9,
+        "value": "Proposal",
+        "entity": "main_topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Can you give me a quotation",
+    "entities": [
+      {
+        "start": 18,
+        "end": 27,
+        "value": "Proposal",
+        "entity": "main_topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "What is the status of the claim I submit",
+    "entities": [
+      {
+        "start": 12,
+        "end": 18,
+        "value": "Existing claim enquiry",
+        "entity": "claim_topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Claim enquiry",
+    "entities": [
+      {
+        "start": 6,
+        "end": 13,
+        "value": "Existing claim enquiry",
+        "entity": "claim_topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I want to complaint about the claim",
+    "entities": [
+      {
+        "start": 10,
+        "end": 19,
+        "value": "Claims dispute",
+        "entity": "claim_topic"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "main_topic",
+        "start": 30,
+        "end": 35,
+        "confidence_entity": 0.5726943827912685,
+        "value": "Claim",
+        "extractor": "CRFEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "complain",
+    "entities": [
+      {
+        "start": 0,
+        "end": 8,
+        "value": "Claims dispute",
+        "entity": "claim_topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I am not hospitalized. Can I still claim",
+    "entities": [
+      {
+        "start": 5,
+        "end": 21,
+        "value": "Outpatient",
+        "entity": "claim_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "is_inpatient",
+        "start": 9,
+        "end": 21,
+        "confidence_entity": 0.524770975112915,
+        "value": "inpatient",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Claim hospitalization",
+    "entities": [
+      {
+        "start": 6,
+        "end": 21,
+        "value": "Hospital",
+        "entity": "claim_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "is_inpatient",
+        "start": 6,
+        "end": 21,
+        "confidence_entity": 0.5559980273246765,
+        "value": "Hospital",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Claim Travel",
+    "entities": [
+      {
+        "start": 6,
+        "end": 12,
+        "value": "Travel",
+        "entity": "claim_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "claim_type",
+        "start": 6,
+        "end": 12,
+        "confidence_entity": 0.9940606951713562,
+        "value": "Travel",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "consultation charges prior to be hospitalized",
+    "entities": [
+      {
+        "start": 21,
+        "end": 45,
+        "value": "pre/post",
+        "entity": "is_inpatient"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "claim_type",
+        "start": 33,
+        "end": 45,
+        "confidence_entity": 0.4022505431258653,
+        "value": "inpatient",
+        "extractor": "CRFEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "is_inpatient",
+        "start": 33,
+        "end": 45,
+        "confidence_entity": 0.6668553948402405,
+        "value": "inpatient",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Am I covered for pre and post checkups and medication",
+    "entities": [
+      {
+        "start": 17,
+        "end": 38,
+        "value": "pre/post",
+        "entity": "is_inpatient"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "submission_type",
+        "start": 25,
+        "end": 29,
+        "confidence_entity": 0.5141749382019043,
+        "value": "Post mail",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "charges incurred during my stay in hospital",
+    "entities": [
+      {
+        "start": 32,
+        "end": 43,
+        "value": "inpatient",
+        "entity": "is_inpatient"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "claim_type",
+        "start": 35,
+        "end": 43,
+        "confidence_entity": 0.6277186546476096,
+        "value": "Hospital",
+        "extractor": "CRFEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "claim_type",
+        "start": 35,
+        "end": 43,
+        "confidence_entity": 0.8979308009147644,
+        "value": "Hospital",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "i want to do it by electronic mail",
+    "entities": [
+      {
+        "start": 19,
+        "end": 34,
+        "value": "Email",
+        "entity": "submission_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "submission_type",
+        "start": 30,
+        "end": 34,
+        "confidence_entity": 0.578298807144165,
+        "value": "Post mail",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "hardcopy submission by mail",
+    "entities": [
+      {
+        "start": 23,
+        "end": 27,
+        "value": "Post mail",
+        "entity": "submission_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "[e-claim]",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "submission_type",
+        "start": 1,
+        "end": 3,
+        "confidence_entity": 0.6087389461806798,
+        "value": "e-",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "submission_type",
+        "start": 1,
+        "end": 8,
+        "confidence_entity": 0.9745104908943176,
+        "value": "Eclaim",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "heyy",
+    "entities": [
+      {
+        "start": 0,
+        "end": 4,
+        "value": "heyy",
+        "entity": "hello_syn"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "bye_syn",
+        "start": 0,
+        "end": 4,
+        "confidence_entity": 0.30098965764045715,
+        "value": "hello_syn",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "sayonara",
+    "entities": [
+      {
+        "start": 0,
+        "end": 8,
+        "value": "sayonara",
+        "entity": "bye_syn"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "bye_syn",
+        "start": 0,
+        "end": 8,
+        "confidence_entity": 0.5308400988578796,
+        "value": "bye_syn",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "here it is s3483645z",
+    "entities": [
+      {
+        "start": 11,
+        "end": 20,
+        "value": "s3483645z",
+        "entity": "nric_regex"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "yiling",
+    "entities": [
+      {
+        "start": 0,
+        "end": 6,
+        "value": "yiling",
+        "entity": "PERSON"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "submission_type",
+        "start": 0,
+        "end": 6,
+        "confidence_entity": 0.13684938848018646,
+        "value": "yiling",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "shyam",
+    "entities": [
+      {
+        "start": 0,
+        "end": 5,
+        "value": "shyam",
+        "entity": "PERSON"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "coronavirus_syn",
+        "start": 0,
+        "end": 5,
+        "confidence_entity": 0.12267079949378967,
+        "value": "shyam",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "here's my number +6597748143",
+    "entities": [
+      {
+        "start": 17,
+        "end": 28,
+        "value": "+6597748143",
+        "entity": "telnum_regex"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "telnum_regex",
+        "start": 17,
+        "end": 28,
+        "confidence_entity": 0.9825286865234375,
+        "value": "+6597748143",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "my email address is johndoe@dxc.com",
+    "entities": [
+      {
+        "start": 20,
+        "end": 35,
+        "value": "johndoe@dxc.com",
+        "entity": "email"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "submission_type",
+        "start": 3,
+        "end": 8,
+        "confidence_entity": 0.8820110540415202,
+        "value": "Email",
+        "extractor": "CRFEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "email",
+        "start": 20,
+        "end": 35,
+        "confidence_entity": 0.7133392435375923,
+        "value": "johndoe@dxc.com",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "submission_type",
+        "start": 3,
+        "end": 8,
+        "confidence_entity": 0.7398744821548462,
+        "value": "Email",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "I need to submit claim for my dependents",
+    "entities": [
+      {
+        "start": 30,
+        "end": 40,
+        "value": "dependents",
+        "entity": "family_syn"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Why can't I claim the injection expense",
+    "entities": [
+      {
+        "start": 22,
+        "end": 31,
+        "value": "injection",
+        "entity": "vaccination_syn"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Can I claim my flu shot charges",
+    "entities": [
+      {
+        "start": 19,
+        "end": 23,
+        "value": "shot",
+        "entity": "vaccination_syn"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Do I have to pay for visiting general doctor",
+    "entities": [
+      {
+        "start": 30,
+        "end": 44,
+        "value": "general doctor",
+        "entity": "general_practioner_syn"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Is coronavirus treatment covered by my insurance policy",
+    "entities": [
+      {
+        "start": 3,
+        "end": 14,
+        "value": "coronavirus",
+        "entity": "coronavirus_syn"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "coronavirus_syn",
+        "start": 3,
+        "end": 14,
+        "confidence_entity": 0.9598543643951416,
+        "value": "coronavirus_syn",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "buy a new insurance policy.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 9,
+        "value": "Proposal",
+        "entity": "main_topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "buy new insurance policy.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 7,
+        "value": "Proposal",
+        "entity": "main_topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Claim outcome",
+    "entities": [
+      {
+        "start": 6,
+        "end": 13,
+        "value": "Existing claim enquiry",
+        "entity": "claim_topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Will I receive cash payment",
+    "entities": [
+      {
+        "start": 20,
+        "end": 27,
+        "value": "Claim payment",
+        "entity": "claim_topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "My claim is not approved. How",
+    "entities": [
+      {
+        "start": 12,
+        "end": 24,
+        "value": "Claims dispute",
+        "entity": "claim_topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "inpatient",
+    "entities": [
+      {
+        "start": 0,
+        "end": 9,
+        "value": "inpatient",
+        "entity": "is_inpatient"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "claim_type",
+        "start": 0,
+        "end": 9,
+        "confidence_entity": 0.8851950168609619,
+        "value": "inpatient",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "email submission",
+    "entities": [
+      {
+        "start": 0,
+        "end": 5,
+        "value": "Email",
+        "entity": "submission_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "submission_type",
+        "start": 0,
+        "end": 5,
+        "confidence_entity": 0.959602415561676,
+        "value": "Email",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Can I upload. the document here",
+    "entities": [
+      {
+        "start": 6,
+        "end": 12,
+        "value": "Upload to bot",
+        "entity": "submission_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "submission to bot",
+    "entities": [
+      {
+        "start": 14,
+        "end": 17,
+        "value": "Upload to bot",
+        "entity": "submission_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "submission_type",
+        "start": 14,
+        "end": 17,
+        "confidence_entity": 0.9956799745559692,
+        "value": "Upload to bot",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "can I post my claim form to you",
+    "entities": [
+      {
+        "start": 6,
+        "end": 10,
+        "value": "Post mail",
+        "entity": "submission_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "submission_type",
+        "start": 6,
+        "end": 10,
+        "confidence_entity": 0.45966455340385437,
+        "value": "Post mail",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "why it is better using e claim facility",
+    "entities": [
+      {
+        "start": 23,
+        "end": 30,
+        "value": "Eclaim",
+        "entity": "submission_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "submission_type",
+        "start": 23,
+        "end": 24,
+        "confidence_entity": 0.5698817138226676,
+        "value": "e",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "submission_type",
+        "start": 23,
+        "end": 39,
+        "confidence_entity": 0.9876844882965088,
+        "value": "Eclaim",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "how are you",
+    "entities": [
+      {
+        "start": 0,
+        "end": 11,
+        "value": "how are you",
+        "entity": "hello_syn"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "goodbye",
+    "entities": [
+      {
+        "start": 0,
+        "end": 7,
+        "value": "goodbye",
+        "entity": "bye_syn"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "bye_syn",
+        "start": 0,
+        "end": 7,
+        "confidence_entity": 0.6148641109466553,
+        "value": "bye_syn",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "good day",
+    "entities": [
+      {
+        "start": 0,
+        "end": 8,
+        "value": "good day",
+        "entity": "bye_syn"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "hello_syn",
+        "start": 0,
+        "end": 8,
+        "confidence_entity": 0.6732711448632168,
+        "value": "bye_syn",
+        "extractor": "CRFEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "hello_syn",
+        "start": 0,
+        "end": 8,
+        "confidence_entity": 0.52,
+        "value": "bye_syn",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "mm",
+    "entities": [
+      {
+        "start": 0,
+        "end": 2,
+        "value": "mm",
+        "entity": "unclear_mmm_regex"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "nric_regex",
+        "start": 0,
+        "end": 2,
+        "confidence_entity": 0.08834118396043777,
+        "value": "mm",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "here's my NRIC t1237135g",
+    "entities": [
+      {
+        "start": 15,
+        "end": 24,
+        "value": "t1237135g",
+        "entity": "nric_regex"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "nric_regex",
+        "start": 23,
+        "end": 24,
+        "confidence_entity": 0.953174352645874,
+        "value": "g",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "brandan",
+    "entities": [
+      {
+        "start": 0,
+        "end": 7,
+        "value": "brandan",
+        "entity": "PERSON"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "akshay",
+    "entities": [
+      {
+        "start": 0,
+        "end": 6,
+        "value": "akshay",
+        "entity": "PERSON"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "submission_type",
+        "start": 0,
+        "end": 6,
+        "confidence_entity": 0.21257568895816803,
+        "value": "akshay",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "hello this is my +6583130141",
+    "entities": [
+      {
+        "start": 0,
+        "end": 5,
+        "value": "hello",
+        "entity": "hello_syn"
+      },
+      {
+        "start": 17,
+        "end": 28,
+        "value": "+6583130141",
+        "entity": "telnum_regex"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "hello_syn",
+        "start": 0,
+        "end": 5,
+        "confidence_entity": 0.8764157366636042,
+        "value": "hello_syn",
+        "extractor": "CRFEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "hello_syn",
+        "start": 0,
+        "end": 5,
+        "confidence_entity": 0.995854377746582,
+        "value": "hello_syn",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "telnum_regex",
+        "start": 17,
+        "end": 28,
+        "confidence_entity": 0.9979104399681091,
+        "value": "+6583130141",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I don't want to pay for my hospital procedure. Can you help me with that",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "claim_type",
+        "start": 27,
+        "end": 35,
+        "confidence_entity": 0.4940914012866774,
+        "value": "Hospital",
+        "extractor": "CRFEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "submit claim for mother",
+    "entities": [
+      {
+        "start": 17,
+        "end": 23,
+        "value": "mother",
+        "entity": "family_syn"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Do I get reimbursed if I have a immunization shot",
+    "entities": [
+      {
+        "start": 32,
+        "end": 44,
+        "value": "immunization",
+        "entity": "vaccination_syn"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "vaccination_syn",
+        "start": 32,
+        "end": 44,
+        "confidence_entity": 0.5152725577354431,
+        "value": "vaccination_syn",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "covid 19",
+    "entities": [
+      {
+        "start": 0,
+        "end": 8,
+        "value": "covid 19",
+        "entity": "coronavirus_syn"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "coronavirus_syn",
+        "start": 0,
+        "end": 5,
+        "confidence_entity": 0.6886921108503504,
+        "value": "coronavirus_syn",
+        "extractor": "CRFEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "coronavirus_syn",
+        "start": 0,
+        "end": 5,
+        "confidence_entity": 0.9830549955368042,
+        "value": "coronavirus_syn",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "can i check my claim status",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "claim_topic",
+        "start": 21,
+        "end": 27,
+        "confidence_entity": 0.5443351841513631,
+        "value": "Existing claim enquiry",
+        "extractor": "CRFEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "please list out the panel hospitals",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "is_panel_hospital",
+        "start": 20,
+        "end": 25,
+        "confidence_entity": 0.4829776804132015,
+        "value": "panel",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "is_panel_hospital",
+        "start": 20,
+        "end": 25,
+        "confidence_entity": 0.4175058603286743,
+        "value": "panel",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "change my premium payment plan",
+    "entities": [
+      {
+        "start": 10,
+        "end": 30,
+        "value": "Policy admin",
+        "entity": "main_topic"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "claim_topic",
+        "start": 18,
+        "end": 25,
+        "confidence_entity": 0.9866220355033875,
+        "value": "Claim payment",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "claim_topic",
+        "start": 26,
+        "end": 30,
+        "confidence_entity": 0.14446546137332916,
+        "value": "plan",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "add new nominees to my policy",
+    "entities": [
+      {
+        "start": 23,
+        "end": 29,
+        "value": "Policy admin",
+        "entity": "main_topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Make proposal.",
+    "entities": [
+      {
+        "start": 5,
+        "end": 13,
+        "value": "Proposal",
+        "entity": "main_topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "purchase new policy.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 8,
+        "value": "Proposal",
+        "entity": "main_topic"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "main_topic",
+        "start": 9,
+        "end": 12,
+        "confidence_entity": 0.6293069124221802,
+        "value": "new",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Has my claim been approved yet",
+    "entities": [
+      {
+        "start": 18,
+        "end": 30,
+        "value": "Existing claim enquiry",
+        "entity": "claim_topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "How will you transfer money to me",
+    "entities": [
+      {
+        "start": 22,
+        "end": 27,
+        "value": "Claim payment",
+        "entity": "claim_topic"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "claim_topic",
+        "start": 22,
+        "end": 27,
+        "confidence_entity": 0.7924959659576416,
+        "value": "Claim payment",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Can you please review my claim again",
+    "entities": [
+      {
+        "start": 15,
+        "end": 21,
+        "value": "Claims dispute",
+        "entity": "claim_topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "How can I claim if I am hospitalized",
+    "entities": [
+      {
+        "start": 24,
+        "end": 36,
+        "value": "Hospital",
+        "entity": "claim_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "is_inpatient",
+        "start": 24,
+        "end": 36,
+        "confidence_entity": 0.4938104450702667,
+        "value": "inpatient",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What I need to do to claim for my stay in hospital",
+    "entities": [
+      {
+        "start": 42,
+        "end": 50,
+        "value": "Hospital",
+        "entity": "claim_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "is_inpatient",
+        "start": 39,
+        "end": 50,
+        "confidence_entity": 0.8557376657190253,
+        "value": "inpatient",
+        "extractor": "CRFEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "what should I do if I am hospitalized",
+    "entities": [
+      {
+        "start": 25,
+        "end": 37,
+        "value": "inpatient",
+        "entity": "is_inpatient"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "claim_type",
+        "start": 25,
+        "end": 37,
+        "confidence_entity": 0.4885549545288086,
+        "value": "inpatient",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Uploading files",
+    "entities": [
+      {
+        "start": 0,
+        "end": 9,
+        "value": "Upload to bot",
+        "entity": "submission_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "submission_type",
+        "start": 0,
+        "end": 9,
+        "confidence_entity": 0.9887409806251526,
+        "value": "Upload to bot",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "I will send to you in the chat",
+    "entities": [
+      {
+        "start": 26,
+        "end": 30,
+        "value": "Upload to bot",
+        "entity": "submission_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "submission_type",
+        "start": 26,
+        "end": 30,
+        "confidence_entity": 0.8194384574890137,
+        "value": "Upload to bot",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Is it faster process if I choose to submit via eclaim",
+    "entities": [
+      {
+        "start": 47,
+        "end": 53,
+        "value": "Eclaim",
+        "entity": "submission_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "submission_type",
+        "start": 47,
+        "end": 53,
+        "confidence_entity": 0.9133153557777405,
+        "value": "Eclaim",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "cya",
+    "entities": [
+      {
+        "start": 0,
+        "end": 3,
+        "value": "cya",
+        "entity": "bye_syn"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "ciao",
+    "entities": [
+      {
+        "start": 0,
+        "end": 4,
+        "value": "ciao",
+        "entity": "bye_syn"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "good day this is my s6541160b",
+    "entities": [
+      {
+        "start": 0,
+        "end": 8,
+        "value": "good day",
+        "entity": "hello_syn"
+      },
+      {
+        "start": 20,
+        "end": 29,
+        "value": "s6541160b",
+        "entity": "nric_regex"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "bye_syn",
+        "start": 0,
+        "end": 4,
+        "confidence_entity": 0.5903852782318829,
+        "value": "good",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "bye_syn",
+        "start": 0,
+        "end": 8,
+        "confidence_entity": 0.9658627510070801,
+        "value": "bye_syn",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "nric_regex",
+        "start": 20,
+        "end": 29,
+        "confidence_entity": 0.27406856417655945,
+        "value": "s6541160b",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "this is brandan",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "PERSON",
+        "start": 8,
+        "end": 15,
+        "confidence_entity": 0.6008329892072106,
+        "value": "brandan",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "submission_type",
+        "start": 0,
+        "end": 4,
+        "confidence_entity": 0.6724112033843994,
+        "value": "this",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "PERSON",
+        "start": 8,
+        "end": 15,
+        "confidence_entity": 0.9929293990135193,
+        "value": "brandan",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "hi this is my +6591234567",
+    "entities": [
+      {
+        "start": 0,
+        "end": 2,
+        "value": "hi",
+        "entity": "hello_syn"
+      },
+      {
+        "start": 14,
+        "end": 25,
+        "value": "+6591234567",
+        "entity": "telnum_regex"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "hello_syn",
+        "start": 0,
+        "end": 2,
+        "confidence_entity": 0.7802642035259736,
+        "value": "hello_syn",
+        "extractor": "CRFEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "hello_syn",
+        "start": 0,
+        "end": 2,
+        "confidence_entity": 0.9857228398323059,
+        "value": "hello_syn",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "telnum_regex",
+        "start": 14,
+        "end": 25,
+        "confidence_entity": 0.9943559765815735,
+        "value": "+6591234567",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "+6581112223",
+    "entities": [
+      {
+        "start": 0,
+        "end": 11,
+        "value": "+6581112223",
+        "entity": "telnum_regex"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "telnum_regex",
+        "start": 0,
+        "end": 11,
+        "confidence_entity": 0.9874327778816223,
+        "value": "+6581112223",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "I want to help my brother to submit his claim",
+    "entities": [
+      {
+        "start": 18,
+        "end": 25,
+        "value": "brother",
+        "entity": "family_syn"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "family_syn",
+        "start": 18,
+        "end": 25,
+        "confidence_entity": 0.4315013885498047,
+        "value": "family_syn",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "china virus infection claim",
+    "entities": [
+      {
+        "start": 0,
+        "end": 11,
+        "value": "china virus",
+        "entity": "coronavirus_syn"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "i want to cancel my submitted claim",
+    "entities": [
+      {
+        "start": 10,
+        "end": 16,
+        "value": "cancel",
+        "entity": "cancel_syn"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "claim status",
+    "entities": [],
+    "predicted_entities": [
+      {
+        "entity": "claim_topic",
+        "start": 6,
+        "end": 12,
+        "confidence_entity": 0.5584129387373487,
+        "value": "Existing claim enquiry",
+        "extractor": "CRFEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "claim_topic",
+        "start": 6,
+        "end": 12,
+        "confidence_entity": 0.9937757253646851,
+        "value": "Existing claim enquiry",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "What is the claim",
+    "entities": [
+      {
+        "start": 12,
+        "end": 17,
+        "value": "Claim",
+        "entity": "main_topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "make changes on my existing policy",
+    "entities": [
+      {
+        "start": 28,
+        "end": 34,
+        "value": "Policy admin",
+        "entity": "main_topic"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "main_topic",
+        "start": 28,
+        "end": 34,
+        "confidence_entity": 0.9917045831680298,
+        "value": "Policy admin",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Policy alteration",
+    "entities": [
+      {
+        "start": 0,
+        "end": 6,
+        "value": "Policy admin",
+        "entity": "main_topic"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "main_topic",
+        "start": 0,
+        "end": 6,
+        "confidence_entity": 0.4130108058452606,
+        "value": "Policy admin",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "New Business.",
+    "entities": [
+      {
+        "start": 0,
+        "end": 12,
+        "value": "Proposal",
+        "entity": "main_topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Claim progress",
+    "entities": [
+      {
+        "start": 6,
+        "end": 14,
+        "value": "Existing claim enquiry",
+        "entity": "claim_topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Claim status",
+    "entities": [
+      {
+        "start": 6,
+        "end": 12,
+        "value": "Existing claim enquiry",
+        "entity": "claim_topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "How soon can I receive my settlement money",
+    "entities": [
+      {
+        "start": 37,
+        "end": 42,
+        "value": "Claim payment",
+        "entity": "claim_topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Why you reject my claim application",
+    "entities": [
+      {
+        "start": 8,
+        "end": 14,
+        "value": "Claims dispute",
+        "entity": "claim_topic"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "hospital claims",
+    "entities": [
+      {
+        "start": 0,
+        "end": 8,
+        "value": "Hospital",
+        "entity": "claim_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "claim_type",
+        "start": 0,
+        "end": 8,
+        "confidence_entity": 0.8894533514976501,
+        "value": "Hospital",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "in-patient",
+    "entities": [
+      {
+        "start": 0,
+        "end": 10,
+        "value": "inpatient",
+        "entity": "is_inpatient"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "is_inpatient",
+        "start": 0,
+        "end": 10,
+        "confidence_entity": 0.8,
+        "value": "inpatient",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "I am admitted to hospital. Can I claim",
+    "entities": [
+      {
+        "start": 14,
+        "end": 25,
+        "value": "inpatient",
+        "entity": "is_inpatient"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "send gmail",
+    "entities": [
+      {
+        "start": 5,
+        "end": 10,
+        "value": "Email",
+        "entity": "submission_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "submission_type",
+        "start": 5,
+        "end": 10,
+        "confidence_entity": 0.872516393661499,
+        "value": "Email",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "I will email you my claim forms.",
+    "entities": [
+      {
+        "start": 7,
+        "end": 12,
+        "value": "Email",
+        "entity": "submission_type"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Should I send my files using this chat channel",
+    "entities": [
+      {
+        "start": 29,
+        "end": 46,
+        "value": "Upload to bot",
+        "entity": "submission_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "submission_type",
+        "start": 34,
+        "end": 38,
+        "confidence_entity": 0.6150904893875122,
+        "value": "Upload to bot",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "can I go to post office and send you the documents",
+    "entities": [
+      {
+        "start": 12,
+        "end": 23,
+        "value": "Post mail",
+        "entity": "submission_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "submission_type",
+        "start": 12,
+        "end": 16,
+        "confidence_entity": 0.8756413459777832,
+        "value": "Post mail",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "I am submitting this thru normal mail",
+    "entities": [
+      {
+        "start": 33,
+        "end": 37,
+        "value": "Post mail",
+        "entity": "submission_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "submission_type",
+        "start": 33,
+        "end": 37,
+        "confidence_entity": 0.5527870059013367,
+        "value": "Post mail",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Can I use eclaim to submit",
+    "entities": [
+      {
+        "start": 10,
+        "end": 16,
+        "value": "Eclaim",
+        "entity": "submission_type"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "submission_type",
+        "start": 10,
+        "end": 16,
+        "confidence_entity": 0.8071767687797546,
+        "value": "Eclaim",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "greetings dude",
+    "entities": [
+      {
+        "start": 0,
+        "end": 9,
+        "value": "greetings",
+        "entity": "hello_syn"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "good night",
+    "entities": [
+      {
+        "start": 0,
+        "end": 10,
+        "value": "good night",
+        "entity": "bye_syn"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "bye_syn",
+        "start": 0,
+        "end": 4,
+        "confidence_entity": 0.8512686491012573,
+        "value": "good",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "hello this is my s7800792c",
+    "entities": [
+      {
+        "start": 0,
+        "end": 5,
+        "value": "hello",
+        "entity": "hello_syn"
+      },
+      {
+        "start": 17,
+        "end": 26,
+        "value": "s7800792c",
+        "entity": "nric_regex"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "hello_syn",
+        "start": 0,
+        "end": 5,
+        "confidence_entity": 0.8177170581533826,
+        "value": "hello_syn",
+        "extractor": "CRFEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "hello_syn",
+        "start": 0,
+        "end": 5,
+        "confidence_entity": 0.9834536910057068,
+        "value": "hello_syn",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "submission_type",
+        "start": 17,
+        "end": 26,
+        "confidence_entity": 0.2701245844364166,
+        "value": "s7800792c",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "f0099561g",
+    "entities": [
+      {
+        "start": 0,
+        "end": 9,
+        "value": "f0099561g",
+        "entity": "nric_regex"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "nric_regex",
+        "start": 8,
+        "end": 9,
+        "confidence_entity": 0.933880090713501,
+        "value": "g",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "here it is +6593341185",
+    "entities": [
+      {
+        "start": 11,
+        "end": 22,
+        "value": "+6593341185",
+        "entity": "telnum_regex"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "telnum_regex",
+        "start": 11,
+        "end": 22,
+        "confidence_entity": 0.9981712102890015,
+        "value": "+6593341185",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Can I submit claim on behalf of my family member",
+    "entities": [
+      {
+        "start": 35,
+        "end": 48,
+        "value": "family member",
+        "entity": "family_syn"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Is it okay that I submit the claim for my spouse",
+    "entities": [
+      {
+        "start": 42,
+        "end": 48,
+        "value": "spouse",
+        "entity": "family_syn"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "I have scheduled a vaccine shot for my business travel. Can I claim that",
+    "entities": [
+      {
+        "start": 19,
+        "end": 26,
+        "value": "vaccine",
+        "entity": "vaccination_syn"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "claim_type",
+        "start": 48,
+        "end": 54,
+        "confidence_entity": 0.8327953405102402,
+        "value": "Travel",
+        "extractor": "CRFEntityExtractor",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      },
+      {
+        "entity": "claim_type",
+        "start": 48,
+        "end": 54,
+        "confidence_entity": 0.9727713465690613,
+        "value": "Travel",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Can I get reimbursed for covid related treatment",
+    "entities": [
+      {
+        "start": 25,
+        "end": 30,
+        "value": "covid",
+        "entity": "coronavirus_syn"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "coronavirus_syn",
+        "start": 25,
+        "end": 30,
+        "confidence_entity": 0.8660081028938293,
+        "value": "coronavirus_syn",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "stop claim",
+    "entities": [
+      {
+        "start": 0,
+        "end": 4,
+        "value": "stop",
+        "entity": "cancel_syn"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "main_topic",
+        "start": 5,
+        "end": 10,
+        "confidence_entity": 0.7673192024230957,
+        "value": "Claim",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  }
+]

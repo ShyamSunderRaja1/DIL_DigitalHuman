@@ -1,0 +1,157 @@
+version: "2.0"
+
+nlu:
+- intent: faq/faq_claim_forms
+  examples: |
+    - Where can I download claim form
+    - I want to download forms for claim submission
+    - Where can I find claim form for downloading
+    - download claim forms
+    - Where are the claim forms stored
+    - provide me the link for claim form
+    - access claim form download site
+    - find claim form
+    - claim form
+    - form 
+
+- intent: faq/faq_claim_process
+  examples: |
+    - What is the claim process
+    - What are  the steps for claim submission
+    - What I need to do to submit a claim
+    - How should I submit a claim online
+    - Can I mail in the hardcopy invoices to submit my claim
+    - claim process
+
+- intent: faq/faq_claim_rejected
+  examples: |
+    - What should I do if my claim gets rejected
+    - I received a claim rejection settlement letter 
+    - Can I appeal for my rejected claim
+    - May I dispute with claim decision
+    - my claim get rejected. Can you help me with that
+    - Why my claim rejected
+    - what happened to my claim
+    - claim rejected
+
+## INTENT NOT DETECTED WELL
+- intent: faq/faq_claim_LOG_letter
+  examples: |
+    - How can I request for LOG letter
+    - I don't want to pay for my hospital procedure. Can you help me with that
+    - I need a letter of guarantee 
+    - Cashless process
+    - Where can I get LOG letter
+    - LOG letter
+
+- intent: faq/faq_claim_LOG_additonal_payment
+  examples: |
+    - additional payment after LOG submission
+    - amount to pay after LOG approval
+    - Did hospital request for any payment even with LOG
+
+- intent: faq/faq_claim_payment_not_received
+  examples: |
+    - not received my payment yet
+    - No payment credited into my bank account
+    - Can you check why I have not received my money
+    - I have waited for 21 days and still no payment
+    - I did not receive any money
+    - still no claim payment
+
+- intent: faq/faq_claim_specialist_visit
+  examples: |
+    - How can I claim from specialist clinic visit
+    - Am I covered if I go to specialist clinic
+    - I have got a referral letter and need to visit specialist clinic next week. Can I claim that
+    - specialist consultation required 
+    - Any pre-requisite for specialist clinic visit
+    - claim clinc visit
+
+- intent: faq/faq_claim_family_member
+  examples: |
+    - Can I submit claim on behalf of my [family member](family_syn)
+    - I want to help my [brother](family_syn) to submit his claim
+    - Is it okay that I submit the claim for my [spouse](family_syn)
+    - I need to submit claim for my [dependents](family_syn)
+    - submit claim for [mother](family_syn)
+    - Can I submit claim for other people
+    - [family] claim
+
+- intent: faq/faq_claim_vaccine
+  examples: |
+    - I have scheduled a [vaccine](vaccination_syn) shot for my business travel. Can I claim that
+    - Is [vaccination](vaccination_syn) covered by my health policy
+    - Why can't I claim the [injection](vaccination_syn) expense
+    - Can I claim my flu [shot](vaccination_syn) charges
+    - Do I get reimbursed if I have a [immunization](vaccination_syn) shot
+    - [vaccine]
+    - claim for [vaccination](vaccination_syn)
+
+
+- intent: faq/faq_claim_health_checkups
+  examples: |
+    - I had a general health checkup last week. Can I claim it
+    - Doctor ordered some lab test during my last visit. How can I claim those
+    - Can I claim for health screening
+    - Can I claim the medicine prescribed by my doctor  
+    - I need to claim for the medical screening.
+    - health checkup claim
+
+- intent: faq/faq_claim_partial
+  examples: |
+    - Why the money I received is less than what I originally claimed
+    - How come some of the expense are not claimable
+    - What can I do if  my claim is not approved in full
+    - Can anyone help me to explain why my claim is only partially approved
+    - I did not receive the full claimed amount
+    - partial claim amount
+    - partial claim payment received
+
+- intent: faq/faq_claim_GP_visit
+  examples: |
+    - is [GP](general_practioner_syn) covered in my policy
+    - can i claim for [GP](general_practioner_syn)
+    - Where can I find [panel doctor](general_practioner_syn) near my place
+    - Do I have to pay for visiting [general doctor](general_practioner_syn)
+    - What I need to bring when I go to the [GP](general_practioner_syn)
+    - [GP](general_practioner_syn)
+    - [general doctor] visit
+
+- intent: faq/faq_claim_covid19
+  examples: |
+    - Can I get reimbursed for [covid](coronavirus_syn) related treatment
+    - Is [coronavirus](coronavirus_syn) treatment covered by my insurance policy
+    - [covid 19](coronavirus_syn)
+    - [corona](coronavirus_syn) treatment
+    - [china virus](coronavirus_syn) infection claim
+    - cost incurred for [covid](coronavirus_syn) treatment
+
+
+- intent: faq/faq_cancel_submitted_claim
+  examples: |
+    - i want to [cancel](cancel_syn) my submitted claim
+    - [stop](cancel_syn) claim 
+    - can i [terminate] my existing claim
+
+- intent: faq/faq_check_claim_status
+  examples: |
+    - can i check my claim status
+    - claim status
+    - is my claim approved
+
+- intent: faq/faq_check_claim_balance
+  examples: |
+    - claim balance
+    - claim amount
+    - i want to check submitted claim balance
+
+- intent: faq/faq_claims_panel_hospital_list
+  examples: |
+    - please list out the panel hospitals
+    - which hospitals are covered by my insurance
+    - where can i find my panel hospitals
+    - hospitals covered by insurance
+    - network hospitals
+    - which are the network hospitals
+

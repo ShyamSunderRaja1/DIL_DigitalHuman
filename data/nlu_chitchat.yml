@@ -1,0 +1,26 @@
+version: "2.0"
+
+nlu:
+
+# **************************************************************************************************************
+# intents for chitchats
+
+- intent: chitchat/ask_botname
+  examples: |
+    - Tell me about yourself
+    - who are you
+    - what are you
+    - what do people call you
+
+
+- intent: chitchat/ask_weather
+  examples: |
+    - what's the weather like today?
+    - Does it look sunny outside today?
+    - Oh, do you mind checking the weather for me please?
+    - is it raining today?
+    - is it going to be cloudy?
+    - can you check the weather?
+    - will the skies be cloudy later?
+    - is it going to be stormy weather
+

@@ -1,0 +1,224 @@
+{
+  "inform_name": {
+    "precision": 0.8,
+    "recall": 0.6153846153846154,
+    "f1-score": 0.6956521739130435,
+    "support": 13,
+    "confused_with": {
+      "human_handoff": 3,
+      "chitchat": 1
+    }
+  },
+  "chitchat": {
+    "precision": 0.631578947368421,
+    "recall": 1.0,
+    "f1-score": 0.7741935483870968,
+    "support": 12,
+    "confused_with": {}
+  },
+  "inform_claimTopic": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 18,
+    "confused_with": {
+      "faq": 13,
+      "inform_mainTopic": 2,
+      "affirm": 1
+    }
+  },
+  "deny": {
+    "precision": 0.5,
+    "recall": 0.3333333333333333,
+    "f1-score": 0.4,
+    "support": 6,
+    "confused_with": {
+      "affirm": 2,
+      "is_unsure": 2
+    }
+  },
+  "inform_isPanelHospital": {
+    "precision": 0.8333333333333334,
+    "recall": 0.9090909090909091,
+    "f1-score": 0.8695652173913043,
+    "support": 11,
+    "confused_with": {
+      "inform_submission_type_eclaim_facility": 1
+    }
+  },
+  "faq": {
+    "precision": 0.7872340425531915,
+    "recall": 0.74,
+    "f1-score": 0.7628865979381443,
+    "support": 100,
+    "confused_with": {
+      "inform_claimTopic": 7,
+      "inform_newClaimType": 4
+    }
+  },
+  "inform_submission_type_email": {
+    "precision": 0.6470588235294118,
+    "recall": 0.9166666666666666,
+    "f1-score": 0.7586206896551724,
+    "support": 12,
+    "confused_with": {
+      "inform_submission_type_post_mail": 1
+    }
+  },
+  "inform_newClaimType": {
+    "precision": 0.6666666666666666,
+    "recall": 0.8695652173913043,
+    "f1-score": 0.7547169811320754,
+    "support": 23,
+    "confused_with": {
+      "faq": 2,
+      "inform_hospitalClaimType": 1
+    }
+  },
+  "inform_hospitalClaimType": {
+    "precision": 0.5555555555555556,
+    "recall": 0.38461538461538464,
+    "f1-score": 0.4545454545454546,
+    "support": 13,
+    "confused_with": {
+      "inform_newClaimType": 6,
+      "inform_submission_type_post_mail": 1
+    }
+  },
+  "greet": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 6,
+    "confused_with": {
+      "chitchat": 2,
+      "goodbye": 2,
+      "affirm": 1
+    }
+  },
+  "goodbye": {
+    "precision": 0.5,
+    "recall": 0.5714285714285714,
+    "f1-score": 0.5333333333333333,
+    "support": 7,
+    "confused_with": {
+      "affirm": 1,
+      "greet": 1
+    }
+  },
+  "inform_submission_type_eclaim_facility": {
+    "precision": 0.9,
+    "recall": 0.9,
+    "f1-score": 0.9,
+    "support": 10,
+    "confused_with": {
+      "inform_submission_type_upload_to_bot": 1
+    }
+  },
+  "affirm": {
+    "precision": 0.5,
+    "recall": 0.5555555555555556,
+    "f1-score": 0.5263157894736842,
+    "support": 9,
+    "confused_with": {
+      "is_unsure": 1,
+      "deny": 1
+    }
+  },
+  "thank_bot": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5,
+    "confused_with": {}
+  },
+  "inform_email": {
+    "precision": 1.0,
+    "recall": 0.5714285714285714,
+    "f1-score": 0.7272727272727273,
+    "support": 7,
+    "confused_with": {
+      "inform_submission_type_email": 2,
+      "inform_name": 1
+    }
+  },
+  "inform_NRIC": {
+    "precision": 1.0,
+    "recall": 0.6666666666666666,
+    "f1-score": 0.8,
+    "support": 6,
+    "confused_with": {
+      "goodbye": 1,
+      "greet": 1
+    }
+  },
+  "human_handoff": {
+    "precision": 0.6,
+    "recall": 0.8571428571428571,
+    "f1-score": 0.7058823529411764,
+    "support": 7,
+    "confused_with": {
+      "inform_submission_type_upload_to_bot": 1
+    }
+  },
+  "is_unsure": {
+    "precision": 0.8125,
+    "recall": 0.8666666666666667,
+    "f1-score": 0.8387096774193549,
+    "support": 15,
+    "confused_with": {
+      "deny": 1,
+      "inform_claimTopic": 1
+    }
+  },
+  "inform_telnum": {
+    "precision": 0.75,
+    "recall": 1.0,
+    "f1-score": 0.8571428571428571,
+    "support": 6,
+    "confused_with": {}
+  },
+  "inform_mainTopic": {
+    "precision": 0.7,
+    "recall": 0.6363636363636364,
+    "f1-score": 0.6666666666666666,
+    "support": 22,
+    "confused_with": {
+      "inform_claimTopic": 3,
+      "inform_submission_type_post_mail": 2
+    }
+  },
+  "inform_submission_type_upload_to_bot": {
+    "precision": 0.6363636363636364,
+    "recall": 0.7777777777777778,
+    "f1-score": 0.7000000000000001,
+    "support": 9,
+    "confused_with": {
+      "inform_submission_type_email": 1,
+      "faq": 1
+    }
+  },
+  "inform_submission_type_post_mail": {
+    "precision": 0.5833333333333334,
+    "recall": 0.6363636363636364,
+    "f1-score": 0.6086956521739131,
+    "support": 11,
+    "confused_with": {
+      "inform_submission_type_email": 2,
+      "inform_submission_type_upload_to_bot": 1
+    }
+  },
+  "accuracy": 0.6890243902439024,
+  "macro avg": {
+    "precision": 0.6547101972137978,
+    "recall": 0.6730931848125525,
+    "f1-score": 0.6515545326993638,
+    "support": 328
+  },
+  "weighted avg": {
+    "precision": 0.6787217046410206,
+    "recall": 0.6890243902439024,
+    "f1-score": 0.6757524083001378,
+    "support": 328
+  }
+}

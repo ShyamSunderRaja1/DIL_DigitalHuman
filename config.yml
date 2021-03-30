@@ -1,0 +1,57 @@
+# Configuration for Rasa NLU.
+# https://rasa.com/docs/rasa/nlu/components/
+language: en
+pipeline:
+  - name: SpacyNLP
+    model: "en_core_web_md"
+    case_sensitive: false
+  - name: SpacyTokenizer
+    intent_tokenization_flag: true
+    intent_split_symbol: "+"
+  - name: SpacyFeaturizer
+  - name: RegexFeaturizer
+  - name: "SpacyEntityExtractor"
+    dimensions: ["PERSON"]
+  # name: RegexEntityExtractor
+  - name: CRFEntityExtractor
+  - name: LexicalSyntacticFeaturizer
+  - name: CountVectorsFeaturizer
+    analyzer: "char_wb"
+    min_ngram: 1
+    max_ngram: 5
+  # intent classification and entity recognition
+  - name: DIETClassifier
+    epochs: 150
+  - name: FallbackClassifier
+    threshold: 0.5
+#  - name: FallbackClassifier
+    # used with Low NLU or Two-Stage Fallback
+    # if dif in NLU confidences for top 2 intents < ambiguity threshold ==> nlu_fallback
+#    threshold: 0.1   
+#    ambiguity_threshold: 0.05
+  - name: EntitySynonymMapper
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: chitchat
+  - name: ResponseSelector
+    epochs: 100
+    retrieval_intent: faq
+# - name: "components.extractors.entity_filter.EntityFilterExtractor"
+#   mappings:
+#   - entities: ["FAC", "iata"]
+#     mapTo: "FAC"
+#   - entities: ["GPE", "iata"]
+#     mapTo: "GPE" 
+policies:
+- name: TEDPolicy
+  max_history: 4
+  epochs: 100
+- name: AugmentedMemoizationPolicy
+  max_history: 4
+- name: RulePolicy # For forms
+  # applies fallback action if no other action was predicted with confidence >= core_fallback_threshold
+  core_fallback_threshold: 0.1
+  core_fallback_action_name: action_default_fallback
+  enable_fallback_prediction: true
+  restrict_rules: true
+  check_for_contradictions: true

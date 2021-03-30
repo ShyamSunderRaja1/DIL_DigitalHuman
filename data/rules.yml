@@ -1,0 +1,58 @@
+version: "2.0"
+
+rules:
+
+- rule: greet by name if user has already provided a name
+  condition: 
+  - slot_was_set:
+    - PERSON: "anything"
+  steps:
+  - intent: greet
+  - action: utter_greet_named_user
+  - action: action_reset_story_slots
+  - action: utter_ask_main_topic
+
+# make payment rule
+- rule: make payment
+  steps:    
+    - intent: ask_payment
+    - action: utter_payment_info
+    
+
+# fallback rule
+- rule: fallback intent
+  steps:
+    - intent: nlu_fallback
+    - action: utter_please_rephrase
+    
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+# Rules for retrieval intents
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+- rule: Respond to chitchat
+  steps:
+  - intent: chitchat
+  - action: utter_chitchat
+
+- rule: Respond to frequently asked questions
+  steps:
+  - intent: faq
+  - action: utter_faq
+
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+- rule: User thanks chatbot
+  steps:
+  - intent: thank_bot
+  - action: utter_your_are_welcome
+  - action: utter_goodbye  
+
+# %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+# - rule: Say 'I am a bot' anytime the user wants to escalate to human manager
+#   steps:
+#   - intent: escalate_manager
+#   - action: utter_iamabot

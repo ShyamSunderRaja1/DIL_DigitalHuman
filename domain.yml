@@ -1,0 +1,514 @@
+version: "2.0"
+
+session_config:
+  session_expiration_time: 15
+  carry_over_slots_to_new_session: false
+
+intents:
+# response selectors
+  - chitchat
+  - general_FAQ
+  - affirm
+  - greet:
+      use_entities: []
+  - goodbye
+  # - escalate_manager
+  - is_unsure
+  - thank_bot
+  - deny
+
+  - ask_admin_conversations
+  - ask_real_human
+  - ask_payment 
+  - inform_NRIC
+  - inform_name
+  - inform_email
+  - inform_telnum
+
+  # Select main topic
+  - inform_mainTopic
+
+  # Select claim topic
+  - inform_claimTopic
+
+  # Select claim type
+  - inform_newClaimType
+
+  # Select hospital claim type
+  - inform_hospitalClaimType
+  - inform_isPanelHospital
+
+  # Submission method
+  - inform_submission_type_email
+  - inform_submission_type_upload_to_bot
+  - inform_submission_type_post_mail
+  - inform_submission_type_eclaim_facility
+
+  # human handoff
+  - human_handoff
+
+  # NOT NEEDED FROM PREVIOUS COE PROJECT
+  # - inform_bid_COE_for_myself
+  # - inform_bid_COE_for_company
+  # - inform_bid_COE_with_dealer
+  # - ask_bid_COE_howto:
+  #      use_entities: []
+  # - COE_FAQ
+
+  - faq
+  
+entities:
+  # personal info provided by user
+  - PERSON
+  - nric_regex
+  - telnum_regex
+  - email
+
+  - main_topic
+  - claim_topic
+  - claim_type
+  - hospital_type
+  - is_panel_hospital
+  - submission_type
+
+  # synonyms, lookups must be defined in [entities] section as syntax mapping only happens AFTER entity extraction
+  - hello_syn
+  - bye_syn
+  - family_syn
+  - vaccination_syn
+  - coronavirus_syn
+  - general_practioner_syn
+  - cancel_syn
+  - submit_syn
+  - email_syn
+  - upload_to_bot_syn
+  - post_mail_syn
+  - eclaim_syn
+
+slots:
+  PERSON:
+    type: text
+    influence_conversation: true
+  is_name_provided:
+    type: bool
+    influence_conversation: false
+  nric_regex:
+    type: text
+    influence_conversation: false
+  telnum_regex:
+    type: text
+    influence_conversation: false
+  email:
+    type: text
+    influence_conversation: false
+  main_topic:
+    type: categorical
+    values:
+    - Policy admin
+    - Claim
+    - Proposal
+    influence_conversation: true
+  claim_topic:
+    type: categorical
+    values: 
+    - New claims registration
+    - Existing claim enquiry
+    - Claim payment
+    - Claims dispute
+    influence_conversation: true
+  claim_type:
+    type: categorical
+    values: 
+    - Outpatient
+    - Hospital
+    - Travel
+    influence_conversation: true
+  is_inpatient: #changed from hospital claim type. inpatent vs pre/post hospitalization
+    type: categorical
+    values:
+    - inpatient
+    - pre/post
+    influence_conversation: true
+  is_panel_hospital:
+    type: categorical
+    values: 
+    - panel
+    - non panel
+    influence_conversation: true
+  submission_type:
+    type: categorical
+    values:
+    - Email
+    - Upload to bot
+    - Post mail
+    - Eclaim
+    influence_conversation: false
+
+forms:
+  who_form:
+    person:
+    - type: from_entity
+      entity: person
+      intent: intent_name
+      not_intent: excluded_intent
+
+
+
+responses:
+  utter_ask_handoff:
+    - text: Would you like to talk to our live agent?
+      custom:
+        payload: select
+        options:
+          - Yes
+          - No
+
+  utter_payment_info:
+    - text: please make your payment here
+      custom:
+        payload: payment_button
+
+  utter_please_rephrase:
+    - text: I'm sorry, i didnt quite catch that. can you please rephrase?
+
+  utter_your_are_welcome:
+    - text: You're welcome! Is there anything else I can help you with?
+    - text: No worries. Is there anything else I could assist with?
+
+  utter_chitchat/ask_botname:
+    - image: "https://va.ecitizen.gov.sg/CFP/VA/LTA/images/neutral.png"
+      text: Hello, my name is Cloudy! I am your virtual assistant!
+    - text: I am the DXC virtual assistant, Cloudy! Nice to meet you.
+
+  utter_chitchat/ask_weather:
+    - text: I will forward your request to NEA website. Please hold on.
+    - text: I am checking with Yahoo Weather right now. Please hold on.
+
+  utter_asks_need_help:
+    - text: Is everything all right? It looks like you need some help.
+    - text: Can I help you with something, {PERSON}? It appears you need something.
+    - text: Did I answer your question correctly?
+
+  utter_goodbye:
+    - text: Good bye {PERSON}! Have a good evening!
+    - text: Have a good day. Good bye
+    - text: See you again!
+
+  utter_acknowledge_affirm:
+    - text: Perfect!
+    - text: Excellent!
+    - text: Great!
+
+  utter_out_of_scope:
+    - text: Sorry, I cannot handle that request.
+
+  utter_iamabot:
+    - text: I am sorry. I am only a robot.
+
+  utter_greeting:
+    - text: >
+        Hello! Welcome to the FGI bot! <br>
+        Tap or click on the mic button once, to speak, or simply type in your question below. To begin, how may I address you?
+
+  utter_greet_named_user:
+    - text: Hi {PERSON}!
+
+  utter_ask_main_topic:
+    - text: What topic can I assist you with?
+      custom:
+        payload: select
+        options: 
+          - Policy admin
+          - Claim
+          - Proposal/New Business
+
+  utter_ask_if_new_claim:
+    - text: Are you here to file a new claim?
+      custom: 
+        payload: select
+        options: 
+          - Yes
+          - No
+
+  utter_ask_existing_claim_topic:
+    - text: What other claim related topics would you like to know?
+      custom:
+        payload: select
+        options:
+          - Existing claim enquiry 
+          - Claims dispute
+          - Claim payment
+
+  utter_ask_claim_type:
+    - text: Please select the type of claim that you would like to make
+      custom: 
+        payload: select
+        options: 
+          - Outpatient
+          - Hospital
+          - Travel
+
+  utter_new_claim_outpatient:
+    - text: >
+          You have selected outpatient claims! <br>
+          Below are the required documents for outpatient claim submission <br>
+          Please submit the following listed document within 90 days from the claim incurred date; <br>
+          1.) Duly completed Outpatient Claim Form(not required if submission via eClaim, unless requested) <br>
+          2.) All Original outpatient tax invoices/receipts indicating the patient's name and date of treatment, <br>
+          3.) For Specialist claims, a copy of the referral letter from the GP is required, <br>
+          4.) A copy of the prescription letter is required if you are submitting a claim for prescribed medication.
+
+  utter_ask_new_claim_hospital:
+    - text: > 
+          You have selected hospital claim! <br>
+          Please select the type of hospital claim you would like to make
+      custom: 
+        payload: select
+        options: 
+          - Pre/Post hospitilization
+          - In-Patient
+  
+  utter_new_claim_hospital_pre_post_hospitilization:
+    - text: >
+          You have selected Pre/Post hospitalization claims! <br>
+          Please submit original hardcopy of the following listed document within 90 days from the claim incurred date; <br>
+          1.) Duly completed Claim Form(not required if submission via eClaim unless requested), <br>
+          2.) Original Final Summary and Itemized Hospital Bills, <br>
+          3.) A copy of the Settlement Letter if the hospital bill is covered by another insurer.
+
+
+  utter_ask_new_claim_hospital_inpatient:
+    - text: > 
+          You have selected In-Patient claims! <br>
+          Please select the type of In-Patient claim you would like to make
+      custom: 
+        payload: select
+        options: 
+          - Panel hospital
+          - Non Panel hospital
+  
+  utter_new_claim_hospital_inpatient_panel:
+    - text: >
+          You have selected Panel hospitals. <br>
+          Here are the list of FAQ related to Panel Claims. Please type in the chat to obtain more info <br>
+          1. Which hospitals come under Panel? <br>
+          2. Where can I get LOG (letter of guarantee) if I am hospitalized (cashless payment)? <br>
+          3. Is there any additional payment for the treatment after submitting the LOG letter?
+
+  utter_new_claim_hospital_inpatient_non_panel:
+    - text: >
+          You have selected non Panel hospitals. <br>
+          Please submit original hardcopy of the following listed document within 90 days from the claim incurred date; <br>
+          1.) Duly completed Claim Form(not required if submission via eClaim unless requested), <br>
+          2.) Original Final Summary and Itemized Hospital Bills, <br>
+          3.) A copy of the Settlement Letter if the hospital bill is covered by another insurer.
+
+  utter_new_claim_travel:
+    - text: Lorem Ipsum 
+
+  utter_existing_claim_enquiry:
+    - text: >
+        We need to authenticate you before we can retrieve your claim record. <br>
+        Please provide your NRIC
+
+  # Submissions
+  utter_ask_submission_type:
+    - text: How would u like to submit your claim?
+      custom:
+        payload: select 
+        options:
+          - Email
+          - Upload to bot
+          - Post Mail
+          - Eclaim
+
+  utter_submission_type_email:
+    - text: >
+        You can send in your documents to this email address. <br>
+        fgcare@futuregenerali.in <br>
+        Please get in touch with us once the documents have been received.
+
+  utter_submission_type_upload_to_bot:
+    - text: >
+        Please upload your document in this link
+      custom:
+          payload: link
+          data:
+            title: Upload document
+            url: "https://www.travelers.com/claimuploadcenter/"
+
+  utter_submission_type_post_mail:
+    - text: >
+        You can post your mail through this address below: <br>
+        Future Generali India Insurance Company <br>
+        3rd Floor, Aathishree Towers, No. 204 <br>
+        D.B. Road, R.S. Puram, Coimbatore 641002 <br>
+        Contact number: 0422-4044888
+
+  utter_submission_type_eclaim_facility:
+    - text: >
+        Login to this link below to submit through our e claim facility. <br>
+        1. Navigate to claim option <br>
+        2. Select the claiment name and claim type <br>
+        3. Upload the documents and bills and click sumbit <br>
+      custom:
+          payload: link
+          data:
+            title: Eclaims
+            url: "https://general.futuregenerali.in/"
+
+  # FEEDBACK
+  utter_feedback:
+    - text: >
+        Was the answer helpful?
+      custom:
+        payload: select
+        options:
+          - Yes
+          - No 
+        
+
+  utter_rephrase_for_feedback:
+    - text: Can you please rephrase your question and ask me again?
+  
+  utter_thank_user_for_feedback:
+    - text: Thank you {PERSON} for your feedback!
+
+  # frequently asked questions
+  utter_faq/faq_claim_forms: 
+    - text: >
+        You can find all downloadable forms in our company's website under Customer Service => Forms. <br>
+        Alternatively, you may visit https://general.futuregenerali.in/forms-and-downloadsform=claim&product=health to access directly.
+  
+  utter_faq/faq_claim_process:
+    - text: >
+        Please follow the below steps for claim processing: <br>
+        1. e-submit your claims online,  download claim forms and submit the hardcopy via post  <br>
+        2. Only for paper submission, submit the claim form together with the required supporting  documents to us directly or through your insurance consultant. <br>
+        3. Claims specialist will review and assess. <br>
+        4. Settlement and payment.
+
+  utter_faq/faq_claim_rejected: 
+    - text: >
+        Please email sg.eb.claims@fgi.com or contact FGI at +91 1234 5678 to enquire on your claim. 
+        Our claim specialist will get in touch with you.
+
+  utter_faq/faq_claim_LOG_letter:
+    - text: >
+        LOG must be requested and presented to the hospital prior or during the hospitalization. Please assist to request for LOG within 2 weeks from the scheduled admission/surgery date. <br>
+        To request for LOG, please email us at sg.eb.claims@fgi.com or contact FGI at +91 1234 5678 with the below information; <br>
+        -Company name/ Policy number <br>
+        -Patient's name and NRIC <br>
+        -Date of the admission <br>
+        -The hospital's name <br>
+        -Diagnosis <br>
+        -Procedure code, if any (for surgery cases)
+  
+  utter_faq/faq_claim_LOG_additonal_payment:
+    - text: >
+        Hospitals have the discretion to request for additional payments or full payments as required by their internal practices even after LOG is submitted.
+
+  utter_faq/faq_claim_payment_not_received:
+    - text: >
+        For Giro: Approved payment will be credited to employee's bank account within 7 working days from the claim approval date. <br>
+        For Cheque: Cheque payment will be issued along with the Explanation of Benefits letter to the beneficiary within 7 working days from the claim approval date. <br>
+        For CPF Payment: Please allow 7 to 14 workings days from the approved date for the claim proceeds to be credited into insured's CPF Medisave/Medshield account. <br>
+        Please email at sg.eb.claims@fgi.com or contact FGI at +91 1234 5678 to enquire on your claim if you did not receive the payment after the above mentioned date.
+
+  utter_faq/faq_claim_specialist_visit:
+    - text: >
+        Yes, you can claim the charges incurred in specialist clinic visit as long as the referral letter is obtained before the said visit. <br>
+        You need to submit the referral letter together with the original invoice for claim processing
+
+  utter_faq/faq_claim_family_member:
+    - text: >
+        Yes, you can claim for your family members on their behalf as long as they are the registered dependents under your policy. <br>
+        Please email at sg.eb.claims@fgi.com or contact FGI at +91 1234 5678 to enquire on dependent cover if you have any questions.
+
+  utter_faq/faq_claim_vaccine:
+    - text: >
+        Sorry,  any medical treatment which is preventive in nature is not covered by our group policy. <br>
+        Please refer to the list of exclusions here:
+      custom:
+          payload: link
+          data:
+            title: Exclusions
+            url: "https://myaia.aia.com.sg/en/vitality/dashboard/partner-benefits/fullerton/vaccination.html"
+
+  utter_faq/faq_claim_health_checkups:
+    - text: >
+        To claim the expense incurred for medical check-up and medicine, you need to present the doctor's lab form/prescription together with the original invoice. The amount reimbursable is up to the remaining insurance benefit amount.
+
+  utter_faq/faq_claim_partial:
+    - text: >
+        Please email sg.eb.claims@fgi.com or contact FGI at +91 1234 5678 to enquire on your claim. Our claim specialist will get in touch with you.
+
+  utter_faq/faq_claim_covid19:
+    - text: >
+        Due to the outbreak of Corona Virus, we hope our valued customer to take all preventive measures to stay safe. We'd also like to inform you that our enhanced insurance policy offers full coverage for Covid patient. <br>
+        In line with the policy terms and conditions: <br>
+        1. A minimum of 24 hours of hospitalization is required for accepting claims. <br>
+        2. Claim is payable only for confirmed cases with hospitalization. <br>
+        3. Maximum claim pay-out is up to the policy sum insured and earned cumulative bonus. <br>
+        4. If any Pre and Post hospitalization expenses (E.g. Medicines, Diagnostic Tests etc) are covered and payable as per policy terms and conditions. <br>
+        5. FAQ's related To Corona Virus (Covid-19) are available in the link <br>
+      custom:
+          payload: link
+          data:
+            title: covid19 coverage
+            url: "https://general.futuregenerali.in/Health-Insurance/corona-kavach"
+
+  utter_faq/faq_claim_GP_visit:
+    - text: >
+        Yes, all GP (General Practitioner) visits are covered in your group insurance policy. You need to present e-card to the clinic to enjoy the cashless process up to $20 per visit. <br>
+        Please refer to the list of panel clinics here:
+      custom:
+          payload: link
+          data:
+            title: Panel Clinics
+            url: "https://eben.aia.com.sg/en/my-aia/member/customer-service/find-clinic.html"
+
+  utter_faq/faq_cancel_submitted_claim:
+    - text: >
+        You can only cancel the claim submitted with Active/In Progress status. Once the claim is Processed, you can't cancel it. <br>
+        Please follow the steps below for cancel a claim submitted. <br>
+        Step 1: Log in to our claim portal claims.fgi.com with your NRIC <br>
+        Step 2: System will send out an OTP to authenticate your identity <br>
+        Step 3: Enter OTP to complete verification and log in, now you may choose the claim request from the list of Active/In Progress claims <br>
+        Step 4: You can cancel the selected claim request
+
+  utter_faq/faq_check_claim_status:
+    - text: > 
+        You can check claim status anytime from our claim portal. <br>
+        Please follow the steps below for check claim status. <br>
+        Step 1: Log in to our claim portal claims.fgi.com (hyperliwith your NRIC <br>
+        Step 2: System will send out an OTP to authenticate your identity <br>
+        Step 3: Enter OTP to complete verification and log in, now you can view status of all the claim submitted.
+
+  utter_faq/faq_check_claim_balance:
+    - text: >
+        You can check claim balance anytime from our claim portal. <br>
+        Please follow the steps below for check claim balance. <br>
+        Step 1: Log in to our claim portal claims.fgi.com with your NRIC <br>
+        Step 2: System will send out an OTP to authenticate your identity <br>
+        Step 3: Enter OTP to complete verification and log in, now you can check the remaining balance from the Claim Summary page.
+
+  utter_faq/faq_claims_panel_hospital_list:
+    - text: >
+        Please refer to the link below to find our panel hospitals:
+      custom:
+        payload: link
+        data: 
+          title: Panel Hospitals
+          url: "https://www.aia.com.sg/en/help-support/qualityhealthcare/browse-healthcare-specialist.html"
+
+actions:
+  - action_default_fallback  
+  - action_validate_affirm
+  - action_validate_NRIC_regex
+  - action_validate_email_regex
+  - action_validate_phonenumber_regex
+  - action_summary_list
+  - action_submission_type
+  - action_handoff
+  - action_reset_story_slots

@@ -1,0 +1,818 @@
+[
+  {
+    "text": "of course",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.6188821196556091
+    }
+  },
+  {
+    "text": "nope",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.33645445108413696
+    }
+  },
+  {
+    "text": "claim",
+    "intent": "inform_mainTopic",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.46173346042633057
+    }
+  },
+  {
+    "text": "May I know more about the claim",
+    "intent": "inform_mainTopic",
+    "intent_prediction": {
+      "name": "inform_claimTopic",
+      "confidence": 0.28593429923057556
+    }
+  },
+  {
+    "text": "Can I top up my insurance coverage",
+    "intent": "inform_mainTopic",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.999906063079834
+    }
+  },
+  {
+    "text": "Claim result",
+    "intent": "inform_claimTopic",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.9862518310546875
+    }
+  },
+  {
+    "text": "When will you make payment",
+    "intent": "inform_claimTopic",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.689575731754303
+    }
+  },
+  {
+    "text": "Payment when",
+    "intent": "inform_claimTopic",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.9998171925544739
+    }
+  },
+  {
+    "text": "Can I appeal for my claim rejected",
+    "intent": "inform_claimTopic",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.9999837875366211
+    }
+  },
+  {
+    "text": "I went to a clinic and can I claim",
+    "intent": "inform_newClaimType",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.9963771104812622
+    }
+  },
+  {
+    "text": "What I need to do to claim for expense incurred during my overseas trip",
+    "intent": "inform_newClaimType",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.9999418258666992
+    }
+  },
+  {
+    "text": "medical checkup before hospitalization",
+    "intent": "inform_hospitalClaimType",
+    "intent_prediction": {
+      "name": "inform_newClaimType",
+      "confidence": 0.832646369934082
+    }
+  },
+  {
+    "text": "in hospital expense",
+    "intent": "inform_hospitalClaimType",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.998744547367096
+    }
+  },
+  {
+    "text": "what is the mailing address",
+    "intent": "inform_submission_type_post_mail",
+    "intent_prediction": {
+      "name": "inform_submission_type_email",
+      "confidence": 0.4844508469104767
+    }
+  },
+  {
+    "text": "[good day] jamie",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.6118031740188599
+    }
+  },
+  {
+    "text": "xiao hua",
+    "intent": "inform_name",
+    "intent_prediction": {
+      "name": "human_handoff",
+      "confidence": 0.4174172878265381
+    }
+  },
+  {
+    "text": "email insurance@outlook.com",
+    "intent": "inform_email",
+    "intent_prediction": {
+      "name": "inform_submission_type_email",
+      "confidence": 0.936893105506897
+    }
+  },
+  {
+    "text": "What are  the steps for claim submission",
+    "intent": "faq",
+    "intent_prediction": {
+      "name": "inform_mainTopic",
+      "confidence": 0.4877570867538452
+    }
+  },
+  {
+    "text": "what happened to my claim",
+    "intent": "faq",
+    "intent_prediction": {
+      "name": "chitchat",
+      "confidence": 0.4981836676597595
+    }
+  },
+  {
+    "text": "can i [terminate] my existing claim",
+    "intent": "faq",
+    "intent_prediction": {
+      "name": "inform_mainTopic",
+      "confidence": 0.5236486792564392
+    }
+  },
+  {
+    "text": "where can i find my panel hospitals",
+    "intent": "faq",
+    "intent_prediction": {
+      "name": "inform_isPanelHospital",
+      "confidence": 0.5154238939285278
+    }
+  },
+  {
+    "text": "absolutely not",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "is_unsure",
+      "confidence": 0.965962827205658
+    }
+  },
+  {
+    "text": "i want to do claim",
+    "intent": "inform_mainTopic",
+    "intent_prediction": {
+      "name": "human_handoff",
+      "confidence": 0.22468042373657227
+    }
+  },
+  {
+    "text": "What is the status of the claim I submit",
+    "intent": "inform_claimTopic",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.8782851099967957
+    }
+  },
+  {
+    "text": "Claim enquiry",
+    "intent": "inform_claimTopic",
+    "intent_prediction": {
+      "name": "inform_mainTopic",
+      "confidence": 0.9784660339355469
+    }
+  },
+  {
+    "text": "I want to complaint about the claim",
+    "intent": "inform_claimTopic",
+    "intent_prediction": {
+      "name": "chitchat",
+      "confidence": 0.3350074589252472
+    }
+  },
+  {
+    "text": "complain",
+    "intent": "inform_claimTopic",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.2589740455150604
+    }
+  },
+  {
+    "text": "consultation charges prior to be hospitalized",
+    "intent": "inform_hospitalClaimType",
+    "intent_prediction": {
+      "name": "inform_newClaimType",
+      "confidence": 0.9918508529663086
+    }
+  },
+  {
+    "text": "charges incurred during my stay in hospital",
+    "intent": "inform_hospitalClaimType",
+    "intent_prediction": {
+      "name": "inform_newClaimType",
+      "confidence": 0.9991074204444885
+    }
+  },
+  {
+    "text": "Is it easier if I choose to stay at panel hospital to receive my treatment",
+    "intent": "inform_isPanelHospital",
+    "intent_prediction": {
+      "name": "inform_submission_type_eclaim_facility",
+      "confidence": 0.2255025953054428
+    }
+  },
+  {
+    "text": "hardcopy submission by mail",
+    "intent": "inform_submission_type_post_mail",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.9998348355293274
+    }
+  },
+  {
+    "text": "hi",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.20689715445041656
+    }
+  },
+  {
+    "text": "heyy",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.378505140542984
+    }
+  },
+  {
+    "text": "call me nicholas",
+    "intent": "inform_name",
+    "intent_prediction": {
+      "name": "chitchat",
+      "confidence": 0.5282188653945923
+    }
+  },
+  {
+    "text": "my email address is johndoe@dxc.com",
+    "intent": "inform_email",
+    "intent_prediction": {
+      "name": "inform_submission_type_email",
+      "confidence": 0.7842018604278564
+    }
+  },
+  {
+    "text": "What I need to do to submit a claim",
+    "intent": "faq",
+    "intent_prediction": {
+      "name": "inform_newClaimType",
+      "confidence": 0.33429911732673645
+    }
+  },
+  {
+    "text": "not received my payment yet",
+    "intent": "faq",
+    "intent_prediction": {
+      "name": "inform_claimTopic",
+      "confidence": 0.9883150458335876
+    }
+  },
+  {
+    "text": "Can I claim my flu shot charges",
+    "intent": "faq",
+    "intent_prediction": {
+      "name": "inform_newClaimType",
+      "confidence": 0.5901153683662415
+    }
+  },
+  {
+    "text": "What can I do if  my claim is not approved in full",
+    "intent": "faq",
+    "intent_prediction": {
+      "name": "inform_claimTopic",
+      "confidence": 0.9288990497589111
+    }
+  },
+  {
+    "text": "is my claim approved",
+    "intent": "faq",
+    "intent_prediction": {
+      "name": "inform_claimTopic",
+      "confidence": 0.9959356784820557
+    }
+  },
+  {
+    "text": "live chat with human",
+    "intent": "human_handoff",
+    "intent_prediction": {
+      "name": "inform_submission_type_upload_to_bot",
+      "confidence": 0.7266280055046082
+    }
+  },
+  {
+    "text": "i'm certain of this",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "inform_claimTopic",
+      "confidence": 0.34226396679878235
+    }
+  },
+  {
+    "text": "nah",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "is_unsure",
+      "confidence": 0.27582812309265137
+    }
+  },
+  {
+    "text": "Claim outcome",
+    "intent": "inform_claimTopic",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.9770867228507996
+    }
+  },
+  {
+    "text": "Will I receive cash payment",
+    "intent": "inform_claimTopic",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.9997360110282898
+    }
+  },
+  {
+    "text": "My claim is not approved. How",
+    "intent": "inform_claimTopic",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.7084815502166748
+    }
+  },
+  {
+    "text": "As an outpatient, do I get reimbursed for the consultation charges",
+    "intent": "inform_newClaimType",
+    "intent_prediction": {
+      "name": "inform_hospitalClaimType",
+      "confidence": 0.823972225189209
+    }
+  },
+  {
+    "text": "post hospitilization",
+    "intent": "inform_hospitalClaimType",
+    "intent_prediction": {
+      "name": "inform_submission_type_post_mail",
+      "confidence": 0.4992992579936981
+    }
+  },
+  {
+    "text": "inpatient",
+    "intent": "inform_hospitalClaimType",
+    "intent_prediction": {
+      "name": "inform_newClaimType",
+      "confidence": 0.8142818212509155
+    }
+  },
+  {
+    "text": "e-claim channel",
+    "intent": "inform_submission_type_eclaim_facility",
+    "intent_prediction": {
+      "name": "inform_submission_type_upload_to_bot",
+      "confidence": 0.6549223065376282
+    }
+  },
+  {
+    "text": "how are you",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "chitchat",
+      "confidence": 0.910136878490448
+    }
+  },
+  {
+    "text": "good day",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.73500657081604
+    }
+  },
+  {
+    "text": "hello i am zachary",
+    "intent": "inform_name",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.6966397762298584
+    }
+  },
+  {
+    "text": "akshay",
+    "intent": "inform_name",
+    "intent_prediction": {
+      "name": "human_handoff",
+      "confidence": 0.34575438499450684
+    }
+  },
+  {
+    "text": "the address is nicholaskangjing.ang@yahoo.com",
+    "intent": "inform_email",
+    "intent_prediction": {
+      "name": "inform_name",
+      "confidence": 0.3527180850505829
+    }
+  },
+  {
+    "text": "I don't want to pay for my hospital procedure. Can you help me with that",
+    "intent": "faq",
+    "intent_prediction": {
+      "name": "inform_hospitalClaimType",
+      "confidence": 0.32156312465667725
+    }
+  },
+  {
+    "text": "Do I get reimbursed if I have a immunization shot",
+    "intent": "faq",
+    "intent_prediction": {
+      "name": "inform_hospitalClaimType",
+      "confidence": 0.5276020765304565
+    }
+  },
+  {
+    "text": "covid 19",
+    "intent": "faq",
+    "intent_prediction": {
+      "name": "inform_telnum",
+      "confidence": 0.9410437941551208
+    }
+  },
+  {
+    "text": "can i check my claim status",
+    "intent": "faq",
+    "intent_prediction": {
+      "name": "chitchat",
+      "confidence": 0.3325619399547577
+    }
+  },
+  {
+    "text": "please list out the panel hospitals",
+    "intent": "faq",
+    "intent_prediction": {
+      "name": "inform_isPanelHospital",
+      "confidence": 0.939743161201477
+    }
+  },
+  {
+    "text": "hospitals covered by insurance",
+    "intent": "faq",
+    "intent_prediction": {
+      "name": "inform_hospitalClaimType",
+      "confidence": 0.4475782811641693
+    }
+  },
+  {
+    "text": "alright",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.3861691653728485
+    }
+  },
+  {
+    "text": "change my premium payment plan",
+    "intent": "inform_mainTopic",
+    "intent_prediction": {
+      "name": "inform_claimTopic",
+      "confidence": 0.4233272671699524
+    }
+  },
+  {
+    "text": "Make proposal.",
+    "intent": "inform_mainTopic",
+    "intent_prediction": {
+      "name": "inform_claimTopic",
+      "confidence": 0.8948953151702881
+    }
+  },
+  {
+    "text": "quotation]{\"entity\": \"main_topic\", \"value\": \"Proposal\"} for the health policy.",
+    "intent": "inform_mainTopic",
+    "intent_prediction": {
+      "name": "inform_submission_type_post_mail",
+      "confidence": 0.6487094759941101
+    }
+  },
+  {
+    "text": "Has my claim been approved yet",
+    "intent": "inform_claimTopic",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.9999958872795105
+    }
+  },
+  {
+    "text": "How will you transfer money to me",
+    "intent": "inform_claimTopic",
+    "intent_prediction": {
+      "name": "inform_submission_type_email",
+      "confidence": 0.3833276927471161
+    }
+  },
+  {
+    "text": "Can you please review my claim again",
+    "intent": "inform_claimTopic",
+    "intent_prediction": {
+      "name": "inform_mainTopic",
+      "confidence": 0.3641621768474579
+    }
+  },
+  {
+    "text": "what should I do if I am hospitalized",
+    "intent": "inform_hospitalClaimType",
+    "intent_prediction": {
+      "name": "inform_newClaimType",
+      "confidence": 0.7941423058509827
+    }
+  },
+  {
+    "text": "do you have an e-mail address for submission",
+    "intent": "inform_submission_type_email",
+    "intent_prediction": {
+      "name": "inform_submission_type_post_mail",
+      "confidence": 0.4697842597961426
+    }
+  },
+  {
+    "text": "I will send to you in the chat",
+    "intent": "inform_submission_type_upload_to_bot",
+    "intent_prediction": {
+      "name": "inform_submission_type_email",
+      "confidence": 0.48522311449050903
+    }
+  },
+  {
+    "text": "hello",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "inform_telnum",
+      "confidence": 0.2568395435810089
+    }
+  },
+  {
+    "text": "cya",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.20809994637966156
+    }
+  },
+  {
+    "text": "ciao",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "inform_name",
+      "confidence": 0.2436961829662323
+    }
+  },
+  {
+    "text": "good day this is my s6541160b",
+    "intent": "inform_NRIC",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.4111575782299042
+    }
+  },
+  {
+    "text": "How should I submit a claim online",
+    "intent": "faq",
+    "intent_prediction": {
+      "name": "inform_submission_type_upload_to_bot",
+      "confidence": 0.306087851524353
+    }
+  },
+  {
+    "text": "Can I mail in the hardcopy invoices to submit my claim",
+    "intent": "faq",
+    "intent_prediction": {
+      "name": "inform_submission_type_post_mail",
+      "confidence": 0.9320358633995056
+    }
+  },
+  {
+    "text": "Can I appeal for my rejected claim",
+    "intent": "faq",
+    "intent_prediction": {
+      "name": "inform_claimTopic",
+      "confidence": 0.9983118176460266
+    }
+  },
+  {
+    "text": "claim clinc visit",
+    "intent": "faq",
+    "intent_prediction": {
+      "name": "inform_newClaimType",
+      "confidence": 0.865466833114624
+    }
+  },
+  {
+    "text": "Can I submit claim for other people",
+    "intent": "faq",
+    "intent_prediction": {
+      "name": "chitchat",
+      "confidence": 0.7787824869155884
+    }
+  },
+  {
+    "text": "claim status",
+    "intent": "faq",
+    "intent_prediction": {
+      "name": "inform_claimTopic",
+      "confidence": 0.999584436416626
+    }
+  },
+  {
+    "text": "yes i am sure",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "is_unsure",
+      "confidence": 0.6256483793258667
+    }
+  },
+  {
+    "text": "of course not",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "affirm",
+      "confidence": 0.9164058566093445
+    }
+  },
+  {
+    "text": "What is the claim",
+    "intent": "inform_mainTopic",
+    "intent_prediction": {
+      "name": "inform_submission_type_post_mail",
+      "confidence": 0.2824494242668152
+    }
+  },
+  {
+    "text": "Claim progress",
+    "intent": "inform_claimTopic",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.6272793412208557
+    }
+  },
+  {
+    "text": "Claim status",
+    "intent": "inform_claimTopic",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.9975247383117676
+    }
+  },
+  {
+    "text": "How soon can I receive my settlement money",
+    "intent": "inform_claimTopic",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.9940769076347351
+    }
+  },
+  {
+    "text": "Why you reject my claim application",
+    "intent": "inform_claimTopic",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.5717213749885559
+    }
+  },
+  {
+    "text": "I am admitted to hospital. Can I claim",
+    "intent": "inform_hospitalClaimType",
+    "intent_prediction": {
+      "name": "inform_newClaimType",
+      "confidence": 0.49287042021751404
+    }
+  },
+  {
+    "text": "Is it okay that I share invoice photo with you",
+    "intent": "inform_submission_type_upload_to_bot",
+    "intent_prediction": {
+      "name": "faq",
+      "confidence": 0.9987257719039917
+    }
+  },
+  {
+    "text": "can I go to post office and send you the documents",
+    "intent": "inform_submission_type_post_mail",
+    "intent_prediction": {
+      "name": "inform_submission_type_upload_to_bot",
+      "confidence": 0.6603811979293823
+    }
+  },
+  {
+    "text": "I am submitting this thru normal mail",
+    "intent": "inform_submission_type_post_mail",
+    "intent_prediction": {
+      "name": "inform_submission_type_email",
+      "confidence": 0.9379612803459167
+    }
+  },
+  {
+    "text": "greetings dude",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "chitchat",
+      "confidence": 0.2677749991416931
+    }
+  },
+  {
+    "text": "no idea",
+    "intent": "is_unsure",
+    "intent_prediction": {
+      "name": "deny",
+      "confidence": 0.9052861928939819
+    }
+  },
+  {
+    "text": "haven't got a clue",
+    "intent": "is_unsure",
+    "intent_prediction": {
+      "name": "inform_claimTopic",
+      "confidence": 0.34342989325523376
+    }
+  },
+  {
+    "text": "f0099561g",
+    "intent": "inform_NRIC",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.2346062809228897
+    }
+  },
+  {
+    "text": "(PERSON)",
+    "intent": "inform_name",
+    "intent_prediction": {
+      "name": "human_handoff",
+      "confidence": 0.8107406497001648
+    }
+  },
+  {
+    "text": "May I dispute with claim decision",
+    "intent": "faq",
+    "intent_prediction": {
+      "name": "inform_mainTopic",
+      "confidence": 0.6671319007873535
+    }
+  },
+  {
+    "text": "Is it okay that I submit the claim for my spouse",
+    "intent": "faq",
+    "intent_prediction": {
+      "name": "inform_newClaimType",
+      "confidence": 0.17110034823417664
+    }
+  },
+  {
+    "text": "How come some of the expense are not claimable",
+    "intent": "faq",
+    "intent_prediction": {
+      "name": "inform_claimTopic",
+      "confidence": 0.46724173426628113
+    }
+  },
+  {
+    "text": "What I need to bring when I go to the GP",
+    "intent": "faq",
+    "intent_prediction": {
+      "name": "inform_claimTopic",
+      "confidence": 0.5637935996055603
+    }
+  },
+  {
+    "text": "stop claim",
+    "intent": "faq",
+    "intent_prediction": {
+      "name": "inform_mainTopic",
+      "confidence": 0.9946758151054382
+    }
+  }
+]

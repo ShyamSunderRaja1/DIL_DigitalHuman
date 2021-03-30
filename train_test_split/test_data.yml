@@ -1,0 +1,373 @@
+version: "2.0"
+nlu:
+- intent: faq/faq_claim_LOG_additonal_payment
+  examples: |
+    - amount to pay after LOG approval
+- intent: faq/faq_cancel_submitted_claim
+  examples: |
+    - [stop](cancel_syn) claim
+- intent: faq/faq_check_claim_status
+  examples: |
+    - is my claim approved
+- intent: faq/faq_check_claim_balance
+  examples: |
+    - claim amount
+- intent: chitchat/ask_botname
+  examples: |
+    - Tell me about yourself
+- intent: faq/faq_claim_process
+  examples: |
+    - What are  the steps for claim submission
+- intent: faq/faq_claim_LOG_letter
+  examples: |
+    - Where can I get LOG letter
+- intent: faq/faq_claim_payment_not_received
+  examples: |
+    - still no claim payment
+- intent: faq/faq_claim_specialist_visit
+  examples: |
+    - specialist consultation required
+- intent: faq/faq_claim_health_checkups
+  examples: |
+    - I need to claim for the medical screening.
+- intent: faq/faq_claim_covid19
+  examples: |
+    - [china virus](coronavirus_syn) infection claim
+- intent: faq/faq_claims_panel_hospital_list
+  examples: |
+    - hospitals covered by insurance
+- intent: faq/faq_claim_family_member
+  examples: |
+    - [family] claim
+- intent: faq/faq_claim_vaccine
+  examples: |
+    - claim for [vaccination](vaccination_syn)
+    - [vaccine]
+- intent: faq/faq_claim_partial
+  examples: |
+    - partial claim payment received
+- intent: faq/faq_claim_GP_visit
+  examples: |
+    - can i claim for [GP](general_practioner_syn)
+    - What I need to bring when I go to the [GP](general_practioner_syn)
+- intent: chitchat/ask_weather
+  examples: |
+    - is it raining today?
+- intent: faq/faq_claim_rejected
+  examples: |
+    - my claim get rejected. Can you help me with that
+    - claim rejected
+- intent: faq/faq_claim_forms
+  examples: |
+    - download claim forms
+    - Where are the claim forms stored
+- intent: thank_bot
+  examples: |
+    - thx
+- intent: deny
+  examples: |
+    - no
+- intent: greet
+  examples: |
+    - [how are you](hello_syn)
+- intent: inform_NRIC
+  examples: |
+    - here it is [s3483645z](nric_regex)
+- intent: inform_telnum
+  examples: |
+    - [hi](hello_syn) this is my [+6591234567](telnum_regex)
+    - number [+6581403243](telnum_regex)
+- intent: human_handoff
+  examples: |
+    - i want to speak to the in charge
+- intent: goodbye
+  examples: |
+    - [bye](bye_syn)
+- intent: inform_email
+  examples: |
+    - email [insurance@outlook.com](email)
+    - the address is [nicholaskangjing.ang@yahoo.com](email)
+- intent: affirm
+  examples: |
+    - yes
+    - okay
+- intent: inform_submission_type_upload_to_bot
+  examples: |
+    - i want to do it by [uploading to bot]{"entity": "submission_type", "value": "Upload to bot"}
+- intent: inform_submission_type_eclaim_facility
+  examples: |
+    - Is it faster process if I choose to submit via [eclaim]{"entity": "submission_type", "value": "Eclaim"}
+    - why it is better using [e claim]{"entity": "submission_type", "value": "Eclaim"} facility
+- intent: inform_isPanelHospital
+  examples: |
+    - [panel](is_panel_hospital)  hospital
+    - what is [panel](is_panel_hospital) hospital
+    - Is it easier if I choose to stay at [panel](is_panel_hospital) hospital to receive my treatment
+- intent: inform_submission_type_post_mail
+  examples: |
+    - i want to do it by [post mail]{"entity": "submission_type", "value": "Post mail"}
+    - what is the [mailing]{"entity": "submission_type", "value": "Post mail"} address
+- intent: inform_submission_type_email
+  examples: |
+    - I will [email]{"entity": "submission_type", "value": "Email"} you my claim forms.
+    - By [e-mail]{"entity": "submission_type", "value": "Email"}
+- intent: inform_hospitalClaimType
+  examples: |
+    - [in patient]{"entity": "is_inpatient", "value": "inpatient"}
+    - Am I covered for [pre and post checkups]{"entity": "is_inpatient", "value": "pre/post"} and medication
+    - [inpatient](is_inpatient)
+- intent: inform_name
+  examples: |
+    - [xiao hua](PERSON)
+    - (PERSON)
+- intent: is_unsure
+  examples: |
+    - i am not sure
+    - not exactly sure
+    - not clear
+- intent: inform_claimTopic
+  examples: |
+    - Can I appeal for my claim [rejected]{"entity": "claim_topic", "value": "Claims dispute"}
+    - [complain]{"entity": "claim_topic", "value": "Claims dispute"}
+    - Has my claim been [approved yet]{"entity": "claim_topic", "value": "Existing claim enquiry"}
+    - How will you transfer [money]{"entity": "claim_topic", "value": "Claim payment"} to me
+- intent: inform_mainTopic
+  examples: |
+    - [buy a new]{"entity": "main_topic", "value": "Proposal"} insurance policy.
+    - What is the [claim]{"entity": "main_topic", "value": "Claim"}
+    - [claim]{"entity": "main_topic", "value": "Claim"}
+    - [New Business]{"entity": "main_topic", "value": "Proposal"}.
+- intent: inform_newClaimType
+  examples: |
+    - [hospital]{"entity": "claim_type", "value": "Hospital"}
+    - claim for [outpatient]{"entity": "claim_type", "value": "Outpatient"}
+    - Can I claim for my [outpatient]{"entity": "claim_type", "value": "Outpatient"} visit
+    - How can I claim if I am [hospitalized]{"entity": "claim_type", "value": "Hospital"}
+    - What is the process for [travel]{"entity": "claim_type", "value": "Travel"} claim
+- synonym: Claim
+  examples: |
+    - claim
+- synonym: Policy admin
+  examples: |
+    - policy admin
+    - policy
+    - insurance coverage
+    - premium payment plan
+    - Policy
+    - Policy Admin
+- synonym: Proposal
+  examples: |
+    - proposal
+    - buy a new
+    - buy new
+    - purchase
+    - New Business
+    - Quotation
+    - quotation
+- synonym: Existing claim enquiry
+  examples: |
+    - approved yet
+    - status
+    - progress
+    - result
+    - outcome
+    - enquiry
+- synonym: Claim payment
+  examples: |
+    - money
+    - payment
+    - Payment
+- synonym: Claims dispute
+  examples: |
+    - reject
+    - not approved
+    - rejected
+    - complaint
+    - review
+    - complain
+- synonym: Outpatient
+  examples: |
+    - outpatient
+    - clinic
+    - not hospitalized
+- synonym: Hospital
+  examples: |
+    - hospital
+    - hospitalization
+- synonym: inpatient
+  examples: |
+    - hospitalized
+    - in patient
+    - in-patient
+    - in hospital
+    - to hospital
+- synonym: Travel
+  examples: |
+    - travel
+    - overseas
+- synonym: pre/post
+  examples: |
+    - pre hospitilization
+    - post hospitilization
+    - before hospitalization
+    - prior to be hospitalized
+    - pre and post hospitalization
+    - pre and post checkups
+- synonym: Email
+  examples: |
+    - e-mail
+    - e mail
+    - gmail
+    - electronic mail
+    - hotmail
+    - email
+- synonym: Upload to bot
+  examples: |
+    - uploading to bot
+    - upload
+    - this chat channel
+    - bot
+    - Uploading
+    - chat
+    - upload to bot
+    - chat bot
+    - chat channel
+    - uploading
+- synonym: Post mail
+  examples: |
+    - post mail
+    - mailing
+    - mail
+    - post office
+    - post
+    - posting
+    - mailing in
+    - mail in
+    - postal
+    - postage
+- synonym: Eclaim
+  examples: |
+    - eclaim facility
+    - e claim
+    - eclaim
+    - e-claim
+    - e-claim facility
+    - e claim facility
+- synonym: hello_syn
+  examples: |
+    - hi
+    - hello
+    - howdie
+    - hey
+    - heyy
+    - heyz
+    - hiya
+    - hullo
+    - yo
+    - wassup
+    - how are you
+    - hola
+    - good afternoon
+    - good morning
+    - good evening
+    - greetings
+- synonym: bye_syn
+  examples: |
+    - goodbye
+    - good day
+    - good night
+    - cya
+    - sayonara
+    - ciao
+    - bye
+    - see you
+- synonym: difference_syn
+  examples: |
+    - differed
+    - differs
+    - differ
+    - difference
+    - different
+    - diff
+    - diferent
+    - differences
+    - gap
+- synonym: between_syn
+  examples: |
+    - between
+    - btwn
+    - betwen
+    - btween
+    - beetwn
+- synonym: cancel_syn
+  examples: |
+    - cancel
+    - terminate
+    - stop
+    - not continue
+    - discontinue
+    - drop
+    - void
+    - revoke
+    - annul
+- synonym: family_syn
+  examples: |
+    - brother
+    - bro
+    - sister
+    - sis
+    - sibling
+    - mother
+    - mum
+    - mom
+    - mummy
+    - mama
+    - father
+    - dad
+    - daddy
+    - grandfather
+    - grandpa
+    - grandmother
+    - grandma
+    - family
+    - next of kin
+    - family member
+    - husband
+    - wife
+    - spouse
+    - dependents
+- synonym: coronavirus_syn
+  examples: |
+    - covid 19
+    - covid
+    - coronavirus
+    - china virus
+    - 2019-nCoV
+    - cov
+    - wuhan virus
+    - bat virus
+    - corona
+- synonym: general_practioner_syn
+  examples: |
+    - GP
+    - general doctor
+    - general practioner
+    - panel doctor
+    - common doctor
+- synonym: vaccination_syn
+  examples: |
+    - vaccine
+    - injection
+    - needle
+    - jab
+    - shot
+    - immunization
+- regex: nric_regex
+  examples: |
+    - (?i)^[STFG]\d{7}[A-Z]$
+- regex: telnum_regex
+  examples: |
+    - ^[+]65[6|8|9]\d{7}
+- regex: unclear_mmm_regex
+  examples: |
+    - m{2,}

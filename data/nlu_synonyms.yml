@@ -1,0 +1,201 @@
+version: "2.0"
+
+nlu:
+
+# =============================================================================================================
+# Synonyms and Lookups
+# these must be defined in domain.yml > entities section
+# =============================================================================================================
+
+# common synonyms
+- synonym: hello_syn
+  examples: |
+    - hi
+    - hello
+    - howdie
+    - hey
+    - heyy
+    - heyz
+    - hiya
+    - hullo
+    - yo
+    - wassup
+    - how are you
+    - hola
+    - good afternoon
+    - good morning
+    - good evening
+    - greetings
+
+- synonym: bye_syn
+  examples: |
+    - goodbye
+    - good day
+    - good night
+    - cya
+    - sayonara
+    - ciao
+    - bye
+    - see you
+
+- synonym: difference_syn
+  examples: |
+    - differed
+    - differs
+    - differ
+    - difference
+    - different
+    - diff
+    - diferent
+    - differences
+    - gap
+
+- synonym: between_syn
+  examples: |
+    - between
+    - btwn
+    - betwen
+    - btween
+    - beetwn
+
+- synonym: cancel_syn
+  examples: |
+    - cancel
+    - terminate 
+    - stop
+    - not continue
+    - discontinue 
+    - drop
+    - void
+    - revoke
+    - annul
+
+# synonyms found in the FAQs
+
+- synonym: family_syn
+  examples: |
+    - brother
+    - bro
+    - sister
+    - sis
+    - sibling
+    - mother
+    - mum
+    - mom
+    - mummy
+    - mama
+    - father
+    - dad
+    - daddy
+    - grandfather
+    - grandpa
+    - grandmother
+    - grandma
+    - family 
+    - next of kin
+    - family member
+    - husband
+    - wife
+    - spouse
+    - dependents
+
+- synonym: coronavirus_syn
+  examples: |
+    - covid 19
+    - covid
+    - coronavirus
+    - china virus 
+    - 2019-nCoV
+    - cov
+    - wuhan virus
+    - bat virus
+    - corona
+
+- synonym: general_practioner_syn
+  examples: |
+    - GP
+    - general doctor
+    - general practioner
+    - panel doctor
+    - common doctor
+
+- synonym: vaccination_syn
+  examples: |
+    - vaccine
+    - injection
+    - needle
+    - jab
+    - shot
+    - immunization
+
+# Submission type synonyms
+- synonym: Email
+  examples: |
+    - email
+    - e mail
+    - e-mail
+    - electronic mail
+    - gmail
+    - hotmail
+
+- synonym: Upload to bot
+  examples: |
+    - upload
+    - upload to bot
+    - chat
+    - chat bot
+    - chat channel
+    - uploading
+    - uploading to bot
+
+- synonym: Post mail
+  examples: |
+    - post mail
+    - post
+    - posting
+    - post office
+    - mailing in
+    - mail in
+    - mail
+    - postal
+    - postage
+
+- synonym: Eclaim
+  examples: |
+    - e-claim facility
+    - e claim facility
+    - eclaim facility
+    - e-claim
+    - e claim
+    - eclaim
+
+# =============================================================================================================
+# Regular Expressions 
+# =============================================================================================================
+
+- regex: nric_regex
+  examples: |
+    - (?i)^[STFG]\d{7}[A-Z]$
+
+- regex: telnum_regex
+  examples: |
+    - ^[+]65[6|8|9]\d{7}
+
+- regex: unclear_mmm_regex
+  examples: |
+    - m{2,}
+
+# - lookup: month_lookup
+#   examples: |
+#     - Jan
+#     - Feb
+#     - Mar
+#     - Apr
+#     - May
+#     - Jun
+#     - Jul
+#     - Aug
+#     - Sep
+#     - Oct
+#     - Nov
+#     - Dec

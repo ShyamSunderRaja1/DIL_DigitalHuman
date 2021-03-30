@@ -1,0 +1,282 @@
+version: "2.0"
+
+stories:
+
+# user requests to speak to a real human.
+# Bot will either transfer chat to a live agent or restart conversation based on user's next intent
+  - story: request to call a real human
+    steps:
+      - intent: human_handoff
+      - action: utter_ask_handoff
+      - or:
+        - intent: affirm
+        - intent: deny
+      - action: action_handoff
+  # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  # Greets user and request for user's name, then asks user for main topic
+  # Only request for user's name once, subsequent greets will be from 'rules.yml'
+  - story: User greets chatbot for the 1st time
+    steps:
+    - intent: greet
+    - action: utter_greeting
+    - intent: inform_name
+      entities:
+      - PERSON: vanessa 
+    - action: utter_greet_named_user
+    - action: utter_ask_main_topic
+
+  # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  - story: User is pondering or uncertain
+    steps:
+    - intent: is_unsure
+    - action: utter_asks_need_help
+    # may branch to other stories from here; can opportunistically grab some 'dynamic' slots >>>>
+
+  # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+  # Storyline continuation from asking user for selection of main topic
+  # Story if user decides to file claims as main topic
+  # Resets any slots that were filled in from current session's conversation, so that story flow is not incorrectly influenced
+  - story: user decides to file claim as main topic
+    steps: 
+    - action: utter_ask_main_topic
+    - action: action_reset_story_slots
+    - intent: inform_mainTopic
+      entities: 
+      - main_topic: Claim
+    - slot_was_set: 
+      - main_topic: Claim
+    - checkpoint: ask_if_new_claim
+
+
+  # Storyline continuation after user indicates intent to do claims as main topic
+  # Story if user indicates intent to do new claims
+  - story: ask user for type of new claim
+    steps: 
+    - checkpoint: ask_if_new_claim
+    - action: utter_ask_if_new_claim
+    - intent: affirm
+    - action: utter_ask_claim_type
+  
+  # Storyline continuation after user indicates intent to do claims as main topic
+  # Story if user indicates intent to do existing claims
+  - story: ask user for type of existing claim
+    steps: 
+    - checkpoint: ask_if_new_claim
+    - action: utter_ask_if_new_claim
+    - intent: deny
+    - action: utter_ask_existing_claim_topic
+
+  # Storyline continuation after user indicates intent to do existing claims
+  # Story if user indicates intent to do existing claim enquiry
+  # Asks user to validate NRIC
+  - story: user chooses to do existing claims enquiry
+    steps:
+    - action: utter_ask_existing_claim_topic
+    - intent: inform_claimTopic
+      entities: 
+      - claim_topic: Existing claim enquiry
+    - slot_was_set: 
+      - claim_topic: Existing claim enquiry
+    - action: utter_existing_claim_enquiry
+    - intent: inform_NRIC
+    - action: action_validate_NRIC_regex
+
+  # Storyline continuation after user indicates intent to do new claims
+  # Story if user indicates intent to do new outpatient claim
+  # Informs user for instructions on documents needed to file new outpatient claim, and ask for their preferred submission type
+  - story: user selects new outpatient claim
+    steps: 
+    - action: utter_ask_claim_type
+    - intent: inform_newClaimType
+      entities: 
+      - claim_type: Outpatient
+    - slot_was_set: 
+      - claim_type: Outpatient
+    - action: utter_new_claim_outpatient
+    - action: utter_ask_submission_type
+
+  # Storyline continuation after user indicates intent to do new claims
+  # Story if user indicates intent to do new hospital claim
+  # Asks user if they are doing pre/post hospitilization claims or inpatient claims
+  - story: user selects new hospital claim 
+    steps: 
+    - action: utter_ask_claim_type
+    - intent: inform_newClaimType
+      entities: 
+      - claim_type: Hospital
+    - slot_was_set: 
+      - claim_type: Hospital
+    - action: utter_ask_new_claim_hospital
+  
+
+  # Storyline continuation after user indicates intent to do hospital claims
+  # Story if user indicates intent to do pre/post hospitlization claim
+  # Informs user for instructions on documents needed to file new pre/post hospitlization claim, and ask for their preferred submission type
+  - story: user selects pre/post hospitlization for new claims
+    steps: 
+    - action: utter_ask_new_claim_hospital
+    - intent: inform_hospitalClaimType
+      entities: 
+      - is_inpatient: pre/post
+    - slot_was_set: 
+      - is_inpatient: pre/post
+    - action: utter_new_claim_hospital_pre_post_hospitilization
+    - action: utter_ask_submission_type
+    
+  # Storyline continuation after user indicates intent to do hospital claims
+  # Story if user indicates intent to do new inpatient claim
+  # Asks user if they are going to a panel or non-panel hospital
+  - story: user selects inpatient hospital for new claims
+    steps: 
+    - action: utter_ask_new_claim_hospital
+    - intent: inform_hospitalClaimType
+      entities: 
+      - is_inpatient: inpatient
+    - slot_was_set: 
+      - is_inpatient: inpatient
+    - action: utter_ask_new_claim_hospital_inpatient
+
+  # Storyline continuation after user indicates intent to do inpatient claims
+  # Story if user indicates intent to do panel hospital claim
+  # Informs user for instructions on documents needed to file new panel hospital claim, and ask for their preferred submission type
+  - story: user selects panel hospital for inpatient hospital new claims
+    steps: 
+    - action: utter_ask_new_claim_hospital_inpatient
+    - intent: inform_isPanelHospital
+      entities: 
+      - is_panel_hospital: panel
+    - slot_was_set: 
+      - is_panel_hospital: panel
+    - action: utter_new_claim_hospital_inpatient_panel
+    - action: utter_ask_submission_type 
+
+  # Storyline continuation after user indicates intent to do inpatient claims
+  # Story if user indicates intent to do non-panel hospital claim
+  # Informs user for instructions on documents needed to file new non-panel hospital claim, and ask for their preferred submission type
+  - story: user selects non panel hospital for inpatient hospital new claims
+    steps: 
+    - action: utter_ask_new_claim_hospital_inpatient
+    - intent: inform_isPanelHospital
+      entities: 
+      - is_panel_hospital: non panel
+    - slot_was_set: 
+      - is_panel_hospital: non panel
+    - action: utter_new_claim_hospital_inpatient_non_panel
+    - action: utter_ask_submission_type
+
+
+  # Storyline continuation after user indicates intent to do any type claims
+  # Story to ask for user's preferred submission type for their claims
+  # Depending on the intent detected, informs user on the instructions on how to submit their claims based on their preferred type
+  # Next, ask user for feedback
+  - story: ask user for submission type 
+    steps:
+    - action: utter_ask_submission_type
+    - or: 
+      - intent: inform_submission_type_email
+      - intent: inform_submission_type_upload_to_bot
+      - intent: inform_submission_type_post_mail
+      - intent: inform_submission_type_eclaim_facility
+    - action: action_submission_type
+    - checkpoint: ask_feedback
+
+
+  # Storyline continuation after user gives feedback
+  # Story when user has given positive feedback
+  # Provides a summary of the conversation to the user
+  - story: user provides feedback
+    steps:
+    - checkpoint: ask_feedback
+    - action: utter_feedback
+    - intent: affirm
+    - action: utter_thank_user_for_feedback
+    - action: action_summary_list
+
+  # Storyline continuation after user gives feedback
+  # Story when user has given negative feedback
+  # Asks user to rephrase question and restarts story for user to try again
+  - story: user doesn't have feedback
+    steps:
+    - checkpoint: ask_feedback
+    - action: utter_feedback
+    - intent: deny
+    - action: utter_rephrase_for_feedback
+    - action: utter_ask_main_topic
+
+
+  # STORIES TO TEST FUNCTIONALITY
+  - story: NRIC testing
+    steps:
+    - intent: inform_NRIC
+    - action: action_validate_NRIC_regex
+  
+  - story: phone number testing
+    steps:
+    - intent: inform_telnum
+    - action: action_validate_phonenumber_regex
+
+  - story: email validation testing
+    steps:
+    - intent: inform_email
+    - action: action_validate_email_regex
+
+
+# NOT NEEDED FROM PREVIOUS COE PROJECT
+  # @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  # - story: User wants to bid for a COE
+  #   steps:
+  #   - intent: ask_bid_COE_howto
+  #   - action: utter_bid_COE_asks_user_decided_on_category
+  #   - or:
+  #     - intent: affirm
+  #     - intent: deny
+  #   - action: action_validate_affirm
+  #   # need a slot to confirm that user has decided category e.g. is_bid_COE_category_decided = true
+  #   - action: utter_bid_COE_asks_myself_or_dealer
+  #   - checkpoint: check_bid_COE_asks_myself_or_dealer
+
+  # - story: User wants to bid for a COE => bid for myself
+  #   steps:
+  #   - checkpoint: check_bid_COE_asks_myself_or_dealer
+  #   - intent: inform_bid_COE_for_myself
+  #   # need a slot to ask if user is bidding for myself e.g. is_bid_COE_bid_for_myself = true
+  #   - action: action_validate_affirm
+  #   - action: utter_bid_COE_asks_myself_myname_or_companyname    
+  #   # need a slot to ask if user is bidding in my name or company name e.g. is_bid_COE_bid_for_myself_name == true ? or _companyname == true?
+  #   - checkpoint: check_bid_COE_asks_myself_myname_or_companyname
+  # - story: User wants to bid for a COE => bid for myself => my name
+  #   steps:
+  #   - checkpoint: check_bid_COE_asks_myself_myname_or_companyname
+  #   - intent: inform_bid_COE_for_myself
+  #   - action: action_validate_affirm
+  #   # need a slot to ask if user is bidding in my name or company name e.g. is_bid_COE_bid_for_myself_name == true ? or _companyname == true?
+  #   - action: utter_bid_COE_list_of_steps_bid_COE_myname
+  # - story: User wants to bid for a COE => bid for myself => company name
+  #   steps:
+  #   - checkpoint: check_bid_COE_asks_myself_myname_or_companyname
+  #   - intent: inform_bid_COE_for_company
+  #   - action: action_validate_affirm
+  #   # need a slot to ask if user is bidding in my name or company name e.g. is_bid_COE_bid_for_myself_name == true ? or _companyname == true?
+  #   - action: utter_bid_COE_list_of_steps_bid_COE_companyname
+
+  # - story: User wants to bid for a COE => bid with dealer
+  #   steps:
+  #   - checkpoint: check_bid_COE_asks_myself_or_dealer
+  #   - intent: inform_bid_COE_with_dealer    
+  #   # need a slot to ask if user is bidding for dealer e.g. is_bid_COE_bid_with_dealer = true
+  #   - action: utter_bid_COE_list_of_steps_bid_COE_companyname
+
+  # - story: User wants to bid for a COE => bid with dealer
+  #   steps:
+  #   - checkpoint: check_bid_COE_asks_myself_or_dealer
+  #   - intent: inform_bid_COE_with_dealer    
+  #   # need a slot to ask if user is bidding for dealer e.g. is_bid_COE_bid_with_dealer = true
+  #   - action: utter_bid_COE_list_of_steps_bid_COE_companyname
+
+
+  #   #- intent: inform_NRIC
+  #   #- action: utter_asks_email
+  #   #- intent: inform_telnum
+  #   #- action: utter_NRIC_and_email
+

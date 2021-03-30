@@ -1,0 +1,154 @@
+{
+  "nric_regex": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 7,
+    "confused_with": {}
+  },
+  "cancel_syn": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 2,
+    "confused_with": {}
+  },
+  "main_topic": {
+    "precision": 0.8571428571428571,
+    "recall": 0.2,
+    "f1-score": 0.32432432432432434,
+    "support": 30,
+    "confused_with": {}
+  },
+  "submission_type": {
+    "precision": 0.8620689655172413,
+    "recall": 0.704225352112676,
+    "f1-score": 0.7751937984496124,
+    "support": 71,
+    "confused_with": {}
+  },
+  "general_practioner_syn": {
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1-score": 0.6666666666666666,
+    "support": 8,
+    "confused_with": {}
+  },
+  "bye_syn": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 9,
+    "confused_with": {
+      "hello_syn": 2
+    }
+  },
+  "vaccination_syn": {
+    "precision": 1.0,
+    "recall": 0.3333333333333333,
+    "f1-score": 0.5,
+    "support": 6,
+    "confused_with": {}
+  },
+  "email": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 7,
+    "confused_with": {}
+  },
+  "claim_type": {
+    "precision": 0.7368421052631579,
+    "recall": 0.5833333333333334,
+    "f1-score": 0.6511627906976745,
+    "support": 24,
+    "confused_with": {
+      "is_inpatient": 1
+    }
+  },
+  "is_inpatient": {
+    "precision": 0.8571428571428571,
+    "recall": 0.3870967741935484,
+    "f1-score": 0.5333333333333333,
+    "support": 31,
+    "confused_with": {
+      "claim_type": 3
+    }
+  },
+  "is_panel_hospital": {
+    "precision": 0.9411764705882353,
+    "recall": 1.0,
+    "f1-score": 0.9696969696969697,
+    "support": 16,
+    "confused_with": {}
+  },
+  "family_syn": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 6,
+    "confused_with": {}
+  },
+  "telnum_regex": {
+    "precision": 1.0,
+    "recall": 0.16666666666666666,
+    "f1-score": 0.2857142857142857,
+    "support": 6,
+    "confused_with": {}
+  },
+  "hello_syn": {
+    "precision": 0.7142857142857143,
+    "recall": 0.4166666666666667,
+    "f1-score": 0.5263157894736842,
+    "support": 12,
+    "confused_with": {
+      "bye_syn": 1
+    }
+  },
+  "coronavirus_syn": {
+    "precision": 1.0,
+    "recall": 0.25,
+    "f1-score": 0.4,
+    "support": 8,
+    "confused_with": {}
+  },
+  "claim_topic": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 20,
+    "confused_with": {}
+  },
+  "unclear_mmm_regex": {
+    "precision": 1.0,
+    "recall": 0.6666666666666666,
+    "f1-score": 0.8,
+    "support": 3,
+    "confused_with": {}
+  },
+  "PERSON": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 7,
+    "confused_with": {}
+  },
+  "micro avg": {
+    "precision": 0.8402777777777778,
+    "recall": 0.4432234432234432,
+    "f1-score": 0.580335731414868,
+    "support": 273
+  },
+  "macro avg": {
+    "precision": 0.6093699427744479,
+    "recall": 0.3448882662762717,
+    "f1-score": 0.41291155324203055,
+    "support": 273
+  },
+  "weighted avg": {
+    "precision": 0.7062530163538262,
+    "recall": 0.4432234432234432,
+    "f1-score": 0.5179790833926172,
+    "support": 273
+  }
+}

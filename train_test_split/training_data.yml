@@ -1,0 +1,569 @@
+version: "2.0"
+nlu:
+- intent: faq/faq_claim_LOG_additonal_payment
+  examples: |
+    - additional payment after LOG submission
+    - Did hospital request for any payment even with LOG
+- intent: faq/faq_cancel_submitted_claim
+  examples: |
+    - i want to [cancel](cancel_syn) my submitted claim
+    - can i [terminate] my existing claim
+- intent: faq/faq_check_claim_status
+  examples: |
+    - can i check my claim status
+    - claim status
+- intent: faq/faq_check_claim_balance
+  examples: |
+    - claim balance
+    - i want to check submitted claim balance
+- intent: chitchat/ask_botname
+  examples: |
+    - who are you
+    - what do people call you
+    - what are you
+- intent: faq/faq_claim_process
+  examples: |
+    - claim process
+    - What is the claim process
+    - How should I submit a claim online
+    - Can I mail in the hardcopy invoices to submit my claim
+    - What I need to do to submit a claim
+- intent: faq/faq_claim_LOG_letter
+  examples: |
+    - I don't want to pay for my hospital procedure. Can you help me with that
+    - LOG letter
+    - How can I request for LOG letter
+    - Cashless process
+    - I need a letter of guarantee
+- intent: faq/faq_claim_payment_not_received
+  examples: |
+    - I have waited for 21 days and still no payment
+    - No payment credited into my bank account
+    - not received my payment yet
+    - Can you check why I have not received my money
+    - I did not receive any money
+- intent: faq/faq_claim_specialist_visit
+  examples: |
+    - Am I covered if I go to specialist clinic
+    - How can I claim from specialist clinic visit
+    - I have got a referral letter and need to visit specialist clinic next week. Can I claim that
+    - Any pre-requisite for specialist clinic visit
+    - claim clinc visit
+- intent: faq/faq_claim_health_checkups
+  examples: |
+    - Doctor ordered some lab test during my last visit. How can I claim those
+    - Can I claim the medicine prescribed by my doctor
+    - health checkup claim
+    - I had a general health checkup last week. Can I claim it
+    - Can I claim for health screening
+- intent: faq/faq_claim_covid19
+  examples: |
+    - Is [coronavirus](coronavirus_syn) treatment covered by my insurance policy
+    - Can I get reimbursed for [covid](coronavirus_syn) related treatment
+    - [corona](coronavirus_syn) treatment
+    - cost incurred for [covid](coronavirus_syn) treatment
+    - [covid 19](coronavirus_syn)
+- intent: faq/faq_claims_panel_hospital_list
+  examples: |
+    - where can i find my panel hospitals
+    - network hospitals
+    - which hospitals are covered by my insurance
+    - which are the network hospitals
+    - please list out the panel hospitals
+- intent: faq/faq_claim_family_member
+  examples: |
+    - Can I submit claim on behalf of my [family member](family_syn)
+    - Is it okay that I submit the claim for my [spouse](family_syn)
+    - I want to help my [brother](family_syn) to submit his claim
+    - I need to submit claim for my [dependents](family_syn)
+    - submit claim for [mother](family_syn)
+    - Can I submit claim for other people
+- intent: faq/faq_claim_vaccine
+  examples: |
+    - Can I claim my flu [shot](vaccination_syn) charges
+    - Why can't I claim the [injection](vaccination_syn) expense
+    - Is [vaccination](vaccination_syn) covered by my health policy
+    - Do I get reimbursed if I have a [immunization](vaccination_syn) shot
+    - I have scheduled a [vaccine](vaccination_syn) shot for my business travel. Can I claim that
+- intent: faq/faq_claim_partial
+  examples: |
+    - I did not receive the full claimed amount
+    - How come some of the expense are not claimable
+    - Can anyone help me to explain why my claim is only partially approved
+    - Why the money I received is less than what I originally claimed
+    - partial claim amount
+    - What can I do if  my claim is not approved in full
+- intent: faq/faq_claim_GP_visit
+  examples: |
+    - Do I have to pay for visiting [general doctor](general_practioner_syn)
+    - Where can I find [panel doctor](general_practioner_syn) near my place
+    - is [GP](general_practioner_syn) covered in my policy
+    - [general doctor] visit
+    - [GP](general_practioner_syn)
+- intent: chitchat/ask_weather
+  examples: |
+    - will the skies be cloudy later?
+    - Oh, do you mind checking the weather for me please?
+    - Does it look sunny outside today?
+    - what's the weather like today?
+    - is it going to be cloudy?
+    - is it going to be stormy weather
+    - can you check the weather?
+- intent: faq/faq_claim_rejected
+  examples: |
+    - what happened to my claim
+    - Can I appeal for my rejected claim
+    - I received a claim rejection settlement letter
+    - May I dispute with claim decision
+    - What should I do if my claim gets rejected
+    - Why my claim rejected
+- intent: faq/faq_claim_forms
+  examples: |
+    - form
+    - find claim form
+    - access claim form download site
+    - I want to download forms for claim submission
+    - Where can I download claim form
+    - provide me the link for claim form
+    - Where can I find claim form for downloading
+    - claim form
+- intent: thank_bot
+  examples: |
+    - great. thx!
+    - very good. thank you
+    - Thanks
+    - thank you
+- intent: deny
+  examples: |
+    - absolutely not
+    - no way
+    - nope
+    - nah
+    - of course not
+- intent: greet
+  examples: |
+    - [hi](hello_syn)
+    - [heyy](hello_syn)
+    - [hello](hello_syn)
+    - [greetings](hello_syn) dude
+    - [good day] jamie
+- intent: inform_NRIC
+  examples: |
+    - [hello](hello_syn) this is my [s7800792c](nric_regex)
+    - [good day](hello_syn) this is my [s6541160b](nric_regex)
+    - [f0099561g](nric_regex)
+    - [S91304859Z]
+    - here's my NRIC [t1237135g](nric_regex)
+- intent: inform_telnum
+  examples: |
+    - [hello](hello_syn) this is my [+6583130141](telnum_regex)
+    - here's my number [+6597748143](telnum_regex)
+    - [+6581112223](telnum_regex)
+    - here it is [+6593341185](telnum_regex)
+- intent: human_handoff
+  examples: |
+    - real person
+    - talk to manager
+    - i want to speak to your manager now
+    - live chat with human
+    - can i speak to a real human
+    - i want to talk to a real person
+- intent: goodbye
+  examples: |
+    - [good day](bye_syn)
+    - [cya](bye_syn)
+    - [goodbye](bye_syn)
+    - [good night](bye_syn)
+    - [sayonara](bye_syn)
+    - [ciao](bye_syn)
+- intent: inform_email
+  examples: |
+    - [innovationlabs@gmail.com](email)
+    - [example@gmail.com](email)
+    - my email address is [johndoe@dxc.com](email)
+    - [outlook@outlook.com](email)
+    - [tan@hotmail.com](email)
+- intent: affirm
+  examples: |
+    - OK
+    - yes i am sure
+    - i'm certain of this
+    - alright
+    - of course
+    - yes please
+    - absolutely
+- intent: inform_submission_type_upload_to_bot
+  examples: |
+    - Should I send my files using [this chat channel]{"entity": "submission_type", "value": "Upload to bot"}
+    - Is it okay that I share invoice photo with you
+    - I will send to you in the [chat]{"entity": "submission_type", "value": "Upload to bot"}
+    - submission to [bot]{"entity": "submission_type", "value": "Upload to bot"}
+    - Can I [upload]{"entity": "submission_type", "value": "Upload to bot"}. the document here
+    - [uploading to bot]{"entity": "submission_type", "value": "Upload to bot"}
+    - By [uploading to bot]{"entity": "submission_type", "value": "Upload to bot"}
+    - [Uploading]{"entity": "submission_type", "value": "Upload to bot"} files
+- intent: inform_submission_type_eclaim_facility
+  examples: |
+    - [e-claim]
+    - what is [eclaim facility]{"entity": "submission_type", "value": "Eclaim"}
+    - i want to do it by [e claim]{"entity": "submission_type", "value": "Eclaim"}
+    - [e-claim]{"entity": "submission_type", "value": "Eclaim"} channel
+    - By [eclaim facility]{"entity": "submission_type", "value": "Eclaim"}
+    - Can I use [eclaim]{"entity": "submission_type", "value": "Eclaim"} to submit
+    - I will submit it via [e-claim]{"entity": "submission_type", "value": "Eclaim"}
+    - [e claim]{"entity": "submission_type", "value": "Eclaim"}
+- intent: inform_isPanelHospital
+  examples: |
+    - Can I claim bills from [non panel](is_panel_hospital) hospital
+    - [non panel](is_panel_hospital)
+    - what document I need to prepare to claim from [panel](is_panel_hospital) hospital
+    - [panel](is_panel_hospital)
+    - claim from [panel](is_panel_hospital) hospital
+    - How can I claim if I am admitted into a [non panel](is_panel_hospital) hospital
+    - [non panel](is_panel_hospital) hospital claim
+    - what document I need to submit to claim from [non panel](is_panel_hospital) hospital
+- intent: inform_submission_type_post_mail
+  examples: |
+    - I will mail it to you via [post]{"entity": "submission_type", "value": "Post mail"}
+    - By [post mail]{"entity": "submission_type", "value": "Post mail"}
+    - send [post mail]{"entity": "submission_type", "value": "Post mail"}
+    - can I go to [post office]{"entity": "submission_type", "value": "Post mail"} and send you the documents
+    - I am submitting this thru normal [mail]{"entity": "submission_type", "value": "Post mail"}
+    - [post mail] can{"entity": "submission_type", "value": "Post mail"}
+    - hardcopy submission by [mail]{"entity": "submission_type", "value": "Post mail"}
+    - can I [post]{"entity": "submission_type", "value": "Post mail"} my claim form to you
+    - [post mail]{"entity": "submission_type", "value": "Post mail"}
+- intent: inform_submission_type_email
+  examples: |
+    - can I [e mail]{"entity": "submission_type", "value": "Email"} you my documents
+    - [e mail]{"entity": "submission_type", "value": "Email"}
+    - I want to send in thru [e mail]{"entity": "submission_type", "value": "Email"}
+    - i want to do it by [electronic mail]{"entity": "submission_type", "value": "Email"}
+    - [e-mail]{"entity": "submission_type", "value": "Email"} please
+    - I shall send an [email]{"entity": "submission_type", "value": "Email"} to you.
+    - [email]{"entity": "submission_type", "value": "Email"} submission
+    - do you have an [e-mail]{"entity": "submission_type", "value": "Email"} address for submission
+    - send [gmail]{"entity": "submission_type", "value": "Email"}
+    - sent in via [hotmail]{"entity": "submission_type", "value": "Email"}
+- intent: inform_hospitalClaimType
+  examples: |
+    - [pre hospitilization]{"entity": "is_inpatient", "value": "pre/post"}
+    - medical checkup [before hospitalization]{"entity": "is_inpatient", "value": "pre/post"}
+    - [pre and post hospitalization]{"entity": "is_inpatient", "value": "pre/post"} doctor visit cost
+    - charges incurred during my stay [in hospital]{"entity": "is_inpatient", "value": "inpatient"}
+    - [in hospital]{"entity": "is_inpatient", "value": "inpatient"} expense
+    - [in-patient]{"entity": "is_inpatient", "value": "inpatient"}
+    - [post hospitilization]{"entity": "is_inpatient", "value": "pre/post"}
+    - consultation charges [prior to be hospitalized]{"entity": "is_inpatient", "value": "pre/post"}
+    - I am admitted [to hospital]{"entity": "is_inpatient", "value": "inpatient"}. Can I claim
+    - what should I do if I am [hospitalized]{"entity": "is_inpatient", "value": "inpatient"}
+- intent: inform_name
+  examples: |
+    - [shyam](PERSON)
+    - this is brandan
+    - John is my name
+    - [brandan](PERSON)
+    - name is johnathon
+    - call me nicholas
+    - [yiling](PERSON)
+    - [akshay](PERSON)
+    - hello i am zachary
+    - my name is [thomas](PERSON)
+    - i am lucy
+- intent: is_unsure
+  examples: |
+    - [mmmmmmmm](unclear_mmm_regex)
+    - idk
+    - dunno
+    - i don't know
+    - can't really confirm
+    - [mm](unclear_mmm_regex)
+    - haven't got a clue
+    - not really sure
+    - not sure
+    - [mmm](unclear_mmm_regex)
+    - no idea
+    - unsure
+- intent: inform_claimTopic
+  examples: |
+    - [Payment]{"entity": "claim_topic", "value": "Claim payment"} when
+    - My claim is [not approved]{"entity": "claim_topic", "value": "Claims dispute"}. How
+    - Can you please [review]{"entity": "claim_topic", "value": "Claims dispute"} my claim again
+    - What is the [status]{"entity": "claim_topic", "value": "Existing claim enquiry"} of the claim I submit
+    - Why you [reject]{"entity": "claim_topic", "value": "Claims dispute"} my claim application
+    - Claim [outcome]{"entity": "claim_topic", "value": "Existing claim enquiry"}
+    - Claim [enquiry]{"entity": "claim_topic", "value": "Existing claim enquiry"}
+    - Claim [status]{"entity": "claim_topic", "value": "Existing claim enquiry"}
+    - Claim [result]{"entity": "claim_topic", "value": "Existing claim enquiry"}
+    - I want to [complaint]{"entity": "claim_topic", "value": "Claims dispute"} about the claim
+    - When will you make [payment]{"entity": "claim_topic", "value": "Claim payment"}
+    - Will I receive cash [payment]{"entity": "claim_topic", "value": "Claim payment"}
+    - Claim [progress]{"entity": "claim_topic", "value": "Existing claim enquiry"}
+    - How soon can I receive my settlement [money]{"entity": "claim_topic", "value": "Claim payment"}
+- intent: inform_mainTopic
+  examples: |
+    - to do [policy admin]{"entity": "main_topic", "value": "Policy admin"}
+    - Can you give me a [quotation]{"entity": "main_topic", "value": "Proposal"}
+    - [Policy]{"entity": "main_topic", "value": "Policy admin"} alteration
+    - [Policy Admin]{"entity": "main_topic", "value": "Policy admin"}
+    - i want to do [claim]{"entity": "main_topic", "value": "Claim"}
+    - make changes on my existing [policy]{"entity": "main_topic", "value": "Policy admin"}
+    - do [claim]{"entity": "main_topic", "value": "Claim"}
+    - change my [premium payment plan]{"entity": "main_topic", "value": "Policy admin"}
+    - enquire my existing [policy]{"entity": "main_topic", "value": "Policy admin"}
+    - Can I top up my [insurance coverage]{"entity": "main_topic", "value": "Policy admin"}
+    - add new nominees to my [policy]{"entity": "main_topic", "value": "Policy admin"}
+    - [Quotation]{"entity": "main_topic", "value": "Proposal"} for new policy.
+    - quotation]{"entity": "main_topic", "value": "Proposal"} for the health policy.
+    - May I know more about the [claim]{"entity": "main_topic", "value": "Claim"}
+    - [buy new]{"entity": "main_topic", "value": "Proposal"} insurance policy.
+    - Insurance [claim]{"entity": "main_topic", "value": "Claim"}
+    - Make [proposal]{"entity": "main_topic", "value": "Proposal"}.
+    - [purchase]{"entity": "main_topic", "value": "Proposal"} new policy.
+- intent: inform_newClaimType
+  examples: |
+    - file [outpatient]{"entity": "claim_type", "value": "Outpatient"}
+    - Claim [hospitalization]{"entity": "claim_type", "value": "Hospital"}
+    - [hospitalization]{"entity": "claim_type", "value": "Hospital"}
+    - [outpatient]{"entity": "claim_type", "value": "Outpatient"}
+    - Any [travel]{"entity": "claim_type", "value": "Travel"} related charges not claimable
+    - I went to a [clinic]{"entity": "claim_type", "value": "Outpatient"} and can I claim
+    - Any [hospital]{"entity": "claim_type", "value": "Hospital"} charges not claimable
+    - What is the process for [hospital]{"entity": "claim_type", "value": "Hospital"} claim
+    - [hospital]{"entity": "claim_type", "value": "Hospital"} claims
+    - How can I claim a [travel]{"entity": "claim_type", "value": "Travel"} policy
+    - What I need to do to claim for expense incurred during my [overseas]{"entity": "claim_type", "value": "Travel"} trip
+    - file [outpatient]{"entity": "claim_type", "value": "Outpatient"} claims
+    - As an [outpatient]{"entity": "claim_type", "value": "Outpatient"}, do I get reimbursed for the consultation charges
+    - [outpatient]{"entity": "claim_type", "value": "Outpatient"} claim
+    - [travel]{"entity": "claim_type", "value": "Travel"} claims
+    - I am [not hospitalized]{"entity": "claim_type", "value": "Outpatient"}. Can I still claim
+    - What I need to do to claim for my stay in [hospital]{"entity": "claim_type", "value": "Hospital"}
+    - Claim [Travel](claim_type)
+- synonym: Claim
+  examples: |
+    - claim
+- synonym: Policy admin
+  examples: |
+    - policy admin
+    - policy
+    - insurance coverage
+    - premium payment plan
+    - Policy
+    - Policy Admin
+- synonym: Proposal
+  examples: |
+    - proposal
+    - buy a new
+    - buy new
+    - purchase
+    - New Business
+    - Quotation
+    - quotation
+- synonym: Existing claim enquiry
+  examples: |
+    - approved yet
+    - status
+    - progress
+    - result
+    - outcome
+    - enquiry
+- synonym: Claim payment
+  examples: |
+    - money
+    - payment
+    - Payment
+- synonym: Claims dispute
+  examples: |
+    - reject
+    - not approved
+    - rejected
+    - complaint
+    - review
+    - complain
+- synonym: Outpatient
+  examples: |
+    - outpatient
+    - clinic
+    - not hospitalized
+- synonym: Hospital
+  examples: |
+    - hospital
+    - hospitalization
+- synonym: inpatient
+  examples: |
+    - hospitalized
+    - in patient
+    - in-patient
+    - in hospital
+    - to hospital
+- synonym: Travel
+  examples: |
+    - travel
+    - overseas
+- synonym: pre/post
+  examples: |
+    - pre hospitilization
+    - post hospitilization
+    - before hospitalization
+    - prior to be hospitalized
+    - pre and post hospitalization
+    - pre and post checkups
+- synonym: Email
+  examples: |
+    - e-mail
+    - e mail
+    - gmail
+    - electronic mail
+    - hotmail
+    - email
+- synonym: Upload to bot
+  examples: |
+    - uploading to bot
+    - upload
+    - this chat channel
+    - bot
+    - Uploading
+    - chat
+    - upload to bot
+    - chat bot
+    - chat channel
+    - uploading
+- synonym: Post mail
+  examples: |
+    - post mail
+    - mailing
+    - mail
+    - post office
+    - post
+    - posting
+    - mailing in
+    - mail in
+    - postal
+    - postage
+- synonym: Eclaim
+  examples: |
+    - eclaim facility
+    - e claim
+    - eclaim
+    - e-claim
+    - e-claim facility
+    - e claim facility
+- synonym: hello_syn
+  examples: |
+    - hi
+    - hello
+    - howdie
+    - hey
+    - heyy
+    - heyz
+    - hiya
+    - hullo
+    - yo
+    - wassup
+    - how are you
+    - hola
+    - good afternoon
+    - good morning
+    - good evening
+    - greetings
+- synonym: bye_syn
+  examples: |
+    - goodbye
+    - good day
+    - good night
+    - cya
+    - sayonara
+    - ciao
+    - bye
+    - see you
+- synonym: difference_syn
+  examples: |
+    - differed
+    - differs
+    - differ
+    - difference
+    - different
+    - diff
+    - diferent
+    - differences
+    - gap
+- synonym: between_syn
+  examples: |
+    - between
+    - btwn
+    - betwen
+    - btween
+    - beetwn
+- synonym: cancel_syn
+  examples: |
+    - cancel
+    - terminate
+    - stop
+    - not continue
+    - discontinue
+    - drop
+    - void
+    - revoke
+    - annul
+- synonym: family_syn
+  examples: |
+    - brother
+    - bro
+    - sister
+    - sis
+    - sibling
+    - mother
+    - mum
+    - mom
+    - mummy
+    - mama
+    - father
+    - dad
+    - daddy
+    - grandfather
+    - grandpa
+    - grandmother
+    - grandma
+    - family
+    - next of kin
+    - family member
+    - husband
+    - wife
+    - spouse
+    - dependents
+- synonym: coronavirus_syn
+  examples: |
+    - covid 19
+    - covid
+    - coronavirus
+    - china virus
+    - 2019-nCoV
+    - cov
+    - wuhan virus
+    - bat virus
+    - corona
+- synonym: general_practioner_syn
+  examples: |
+    - GP
+    - general doctor
+    - general practioner
+    - panel doctor
+    - common doctor
+- synonym: vaccination_syn
+  examples: |
+    - vaccine
+    - injection
+    - needle
+    - jab
+    - shot
+    - immunization
+- regex: nric_regex
+  examples: |
+    - (?i)^[STFG]\d{7}[A-Z]$
+- regex: telnum_regex
+  examples: |
+    - ^[+]65[6|8|9]\d{7}
+- regex: unclear_mmm_regex
+  examples: |
+    - m{2,}

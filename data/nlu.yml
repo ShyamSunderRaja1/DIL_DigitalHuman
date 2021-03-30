@@ -1,0 +1,397 @@
+version: "2.0"
+
+nlu:
+
+# /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# intents for main business conversational logic
+
+# intent to ask for a real human
+- intent: human_handoff
+  examples: |
+    - can i speak to a real human
+    - i want to talk to a real person
+    - real person
+    - i want to speak to your manager now
+    - talk to manager
+    - i want to speak to the in charge
+    - live chat with human
+
+# intent for payment
+# - intent: ask_payment
+#   examples: |
+#     - can i make payment
+#     - pay
+#     - i want to pay
+#     - i would like to make payment now
+
+
+- intent: affirm
+  examples: |
+    - yes
+    - yes please
+    - okay
+    - alright
+    - OK
+    - absolutely
+    - of course
+    - yes i am sure
+    - i'm certain of this
+
+- intent: deny
+  examples: |
+    - no
+    - nah
+    - nope
+    - absolutely not
+    - of course not
+    - no way
+
+# Select main topic
+- intent: inform_mainTopic
+  examples: |
+    - i want to do [claim]{"entity": "main_topic", "value": "Claim"}
+    - do [claim]{"entity": "main_topic", "value": "Claim"}
+    - Insurance [claim]{"entity": "main_topic", "value": "Claim"}
+    - [claim]{"entity": "main_topic", "value": "Claim"}
+    - What is the [claim]{"entity": "main_topic", "value": "Claim"}
+    - May I know more about the [claim]{"entity": "main_topic", "value": "Claim"}
+    - to do [policy admin]{"entity": "main_topic", "value": "Policy admin"}
+    - make changes on my existing [policy]{"entity": "main_topic", "value": "Policy admin"}
+    - Can I top up my [insurance coverage]{"entity": "main_topic", "value": "Policy admin"}
+    - change my [premium payment plan]{"entity": "main_topic", "value": "Policy admin"}
+    - enquire my existing [policy]{"entity": "main_topic", "value": "Policy admin"}
+    - add new nominees to my [policy]{"entity": "main_topic", "value": "Policy admin"}
+    - [Policy]{"entity": "main_topic", "value": "Policy admin"} alteration
+    - [Policy Admin]{"entity": "main_topic", "value": "Policy admin"}
+    - Make [proposal]{"entity": "main_topic", "value": "Proposal"}.
+    - [buy a new]{"entity": "main_topic", "value": "Proposal"} insurance policy.
+    - [buy new]{"entity": "main_topic", "value": "Proposal"} insurance policy.
+    - quotation]{"entity": "main_topic", "value": "Proposal"} for the health policy.
+    - [purchase]{"entity": "main_topic", "value": "Proposal"} new policy.
+    - [New Business]{"entity": "main_topic", "value": "Proposal"}.
+    - [Quotation]{"entity": "main_topic", "value": "Proposal"} for new policy.
+    - Can you give me a [quotation]{"entity": "main_topic", "value": "Proposal"}
+
+- intent: inform_claimTopic
+  examples: |
+    - Has my claim been [approved yet]{"entity": "claim_topic", "value": "Existing claim enquiry"}
+    - What is the [status]{"entity": "claim_topic", "value": "Existing claim enquiry"} of the claim I submit
+    - Claim [progress]{"entity": "claim_topic", "value": "Existing claim enquiry"}
+    - Claim [status]{"entity": "claim_topic", "value": "Existing claim enquiry"}
+    - Claim [result]{"entity": "claim_topic", "value": "Existing claim enquiry"}
+    - Claim [outcome]{"entity": "claim_topic", "value": "Existing claim enquiry"}
+    - Claim [enquiry]{"entity": "claim_topic", "value": "Existing claim enquiry"}
+    - How soon can I receive my settlement [money]{"entity": "claim_topic", "value": "Claim payment"}
+    - When will you make [payment]{"entity": "claim_topic", "value": "Claim payment"}
+    - [Payment]{"entity": "claim_topic", "value": "Claim payment"} when
+    - How will you transfer [money]{"entity": "claim_topic", "value": "Claim payment"} to me
+    - Will I receive cash [payment]{"entity": "claim_topic", "value": "Claim payment"}
+    - Why you [reject]{"entity": "claim_topic", "value": "Claims dispute"} my claim application
+    - My claim is [not approved]{"entity": "claim_topic", "value": "Claims dispute"}. How
+    - Can I appeal for my claim [rejected]{"entity": "claim_topic", "value": "Claims dispute"}
+    - I want to [complaint]{"entity": "claim_topic", "value": "Claims dispute"} about the claim
+    - Can you please [review]{"entity": "claim_topic", "value": "Claims dispute"} my claim again
+    - [complain]{"entity": "claim_topic", "value": "Claims dispute"}
+
+
+# Select claim type 
+- intent: inform_newClaimType
+  examples: |
+    - file [outpatient]{"entity": "claim_type", "value": "Outpatient"} claims
+    - [outpatient]{"entity": "claim_type", "value": "Outpatient"}
+    - file [outpatient]{"entity": "claim_type", "value": "Outpatient"}
+    - Can I claim for my [outpatient]{"entity": "claim_type", "value": "Outpatient"} visit
+    - As an [outpatient]{"entity": "claim_type", "value": "Outpatient"}, do I get reimbursed for the consultation charges
+    - I went to a [clinic]{"entity": "claim_type", "value": "Outpatient"} and can I claim
+    - [outpatient]{"entity": "claim_type", "value": "Outpatient"} claim
+    - claim for [outpatient]{"entity": "claim_type", "value": "Outpatient"}
+    - I am [not hospitalized]{"entity": "claim_type", "value": "Outpatient"}. Can I still claim
+    - [outpatient]{"entity": "claim_type", "value": "Outpatient"}
+    - [hospital]{"entity": "claim_type", "value": "Hospital"} claims
+    - How can I claim if I am [hospitalized]{"entity": "claim_type", "value": "Hospital"}
+    - What is the process for [hospital]{"entity": "claim_type", "value": "Hospital"} claim
+    - Claim [hospitalization]{"entity": "claim_type", "value": "Hospital"}
+    - What I need to do to claim for my stay in [hospital]{"entity": "claim_type", "value": "Hospital"}
+    - Any [hospital]{"entity": "claim_type", "value": "Hospital"} charges not claimable
+    - [hospitalization]{"entity": "claim_type", "value": "Hospital"}
+    - [hospital]{"entity": "claim_type", "value": "Hospital"}
+    - [travel]{"entity": "claim_type", "value": "Travel"} claims
+    - How can I claim a [travel]{"entity": "claim_type", "value": "Travel"} policy
+    - What is the process for [travel]{"entity": "claim_type", "value": "Travel"} claim
+    - Claim [Travel]{"entity": "claim_type", "value": "Travel"}
+    - What I need to do to claim for expense incurred during my [overseas]{"entity": "claim_type", "value": "Travel"} trip
+    - Any [travel]{"entity": "claim_type", "value": "Travel"} related charges not claimable
+
+- intent: inform_hospitalClaimType
+  examples: |
+    - [pre hospitilization]{"entity": "is_inpatient", "value": "pre/post"}
+    - [post hospitilization]{"entity": "is_inpatient", "value": "pre/post"}
+    - medical checkup [before hospitalization]{"entity": "is_inpatient", "value": "pre/post"}
+    - consultation charges [prior to be hospitalized]{"entity": "is_inpatient", "value": "pre/post"}
+    - [pre and post hospitalization]{"entity": "is_inpatient", "value": "pre/post"} doctor visit cost
+    - Am I covered for [pre and post checkups]{"entity": "is_inpatient", "value": "pre/post"} and medication
+    - [in patient]{"entity": "is_inpatient", "value": "inpatient"}
+    - [inpatient]{"entity": "is_inpatient", "value": "inpatient"}
+    - [in-patient]{"entity": "is_inpatient", "value": "inpatient"}
+    - what should I do if I am [hospitalized]{"entity": "is_inpatient", "value": "inpatient"}
+    - [in hospital]{"entity": "is_inpatient", "value": "inpatient"} expense
+    - charges incurred during my stay [in hospital]{"entity": "is_inpatient", "value": "inpatient"}
+    - I am admitted [to hospital]{"entity": "is_inpatient", "value": "inpatient"}. Can I claim
+
+- intent: inform_isPanelHospital
+  examples: |
+    - [panel]{"entity": "is_panel_hospital", "value": "panel"}
+    - what is [panel]{"entity": "is_panel_hospital", "value": "panel"} hospital
+    - [panel]{"entity": "is_panel_hospital", "value": "panel"}  hospital
+    - claim from [panel]{"entity": "is_panel_hospital", "value": "panel"} hospital
+    - what document I need to prepare to claim from [panel]{"entity": "is_panel_hospital", "value": "panel"} hospital
+    - Is it easier if I choose to stay at [panel]{"entity": "is_panel_hospital", "value": "panel"} hospital to receive my treatment
+    - [non panel]{"entity": "is_panel_hospital", "value": "non panel"}
+    - [non panel]{"entity": "is_panel_hospital", "value": "non panel"} hospital claim
+    - How can I claim if I am admitted into a [non panel]{"entity": "is_panel_hospital", "value": "non panel"} hospital
+    - what document I need to submit to claim from [non panel]{"entity": "is_panel_hospital", "value": "non panel"} hospital
+    - Can I claim bills from [non panel]{"entity": "is_panel_hospital", "value": "non panel"} hospital
+
+# Submission method
+- intent: inform_submission_type_email
+  examples: |
+    - By [e-mail]{"entity": "submission_type", "value": "Email"}
+    - [e mail]{"entity": "submission_type", "value": "Email"}
+    - send [gmail]{"entity": "submission_type", "value": "Email"}
+    - i want to do it by [electronic mail]{"entity": "submission_type", "value": "Email"}
+    - sent in via [hotmail]{"entity": "submission_type", "value": "Email"}
+    - can I [e mail]{"entity": "submission_type", "value": "Email"} you my documents
+    - do you have an [e-mail]{"entity": "submission_type", "value": "Email"} address for submission
+    - I will [email]{"entity": "submission_type", "value": "Email"} you my claim forms.
+    - I shall send an [email]{"entity": "submission_type", "value": "Email"} to you.
+    - [email]{"entity": "submission_type", "value": "Email"} submission
+    - [e-mail]{"entity": "submission_type", "value": "Email"} please
+    - I want to send in thru [e mail]{"entity": "submission_type", "value": "Email"}
+
+
+- intent: inform_submission_type_upload_to_bot
+  examples: |
+    - By [uploading to bot]{"entity": "submission_type", "value": "Upload to bot"}
+    - [uploading to bot]{"entity": "submission_type", "value": "Upload to bot"}
+    - i want to do it by [uploading to bot]{"entity": "submission_type", "value": "Upload to bot"}
+    - Can I [upload]{"entity": "submission_type", "value": "Upload to bot"}. the document here
+    - Should I send my files using [this chat channel]{"entity": "submission_type", "value": "Upload to bot"}
+    - Is it okay that I share invoice photo with you
+    - submission to [bot]{"entity": "submission_type", "value": "Upload to bot"}
+    - [Uploading]{"entity": "submission_type", "value": "Upload to bot"} files
+    - I will send to you in the [chat]{"entity": "submission_type", "value": "Upload to bot"}
+
+
+- intent: inform_submission_type_post_mail
+  examples: |
+    - By [post mail]{"entity": "submission_type", "value": "Post mail"}
+    - [post mail]{"entity": "submission_type", "value": "Post mail"}
+    - send [post mail]{"entity": "submission_type", "value": "Post mail"}
+    - i want to do it by [post mail]{"entity": "submission_type", "value": "Post mail"}
+    - what is the [mailing]{"entity": "submission_type", "value": "Post mail"} address
+    - hardcopy submission by [mail]{"entity": "submission_type", "value": "Post mail"}
+    - can I go to [post office]{"entity": "submission_type", "value": "Post mail"} and send you the documents
+    - can I [post]{"entity": "submission_type", "value": "Post mail"} my claim form to you
+    - [post mail] can{"entity": "submission_type", "value": "Post mail"}
+    - I will mail it to you via [post]{"entity": "submission_type", "value": "Post mail"}
+    - I am submitting this thru normal [mail]{"entity": "submission_type", "value": "Post mail"}
+
+
+- intent: inform_submission_type_eclaim_facility
+  examples: |
+    - By [eclaim facility]{"entity": "submission_type", "value": "Eclaim"}
+    - [e-claim]
+    - [e claim]{"entity": "submission_type", "value": "Eclaim"}
+    - i want to do it by [e claim]{"entity": "submission_type", "value": "Eclaim"}
+    - what is [eclaim facility]{"entity": "submission_type", "value": "Eclaim"}
+    - Can I use [eclaim]{"entity": "submission_type", "value": "Eclaim"} to submit
+    - [e-claim]{"entity": "submission_type", "value": "Eclaim"} channel
+    - why it is better using [e claim]{"entity": "submission_type", "value": "Eclaim"} facility
+    - I will submit it via [e-claim]{"entity": "submission_type", "value": "Eclaim"}
+    - Is it faster process if I choose to submit via [eclaim]{"entity": "submission_type", "value": "Eclaim"}
+
+# /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+# greetings,farewells and chitchat intents e.g weather
+
+- intent: greet
+  examples: |
+    - [hello](hello_syn)
+    - [hi](hello_syn)
+    - [how are you](hello_syn)
+    - [greetings](hello_syn) dude
+    - [heyy](hello_syn)
+    - [good day] jamie
+
+- intent: goodbye
+  examples: |
+    - [goodbye](bye_syn)
+    - [good day](bye_syn)
+    - [good night](bye_syn)
+    - [cya](bye_syn)
+    - [sayonara](bye_syn)
+    - [ciao](bye_syn)
+    - [bye](bye_syn)
+
+- intent: thank_bot
+  examples: |
+    - Thanks
+    - thank you
+    - thx
+    - great. thx!
+    - very good. thank you
+
+- intent: is_unsure
+  examples: |
+    - not sure
+    - i am not sure
+    - no idea
+    - i don't know
+    - unsure 
+    - [mmm](unclear_mmm_regex)
+    - [mmmmmmmm](unclear_mmm_regex)
+    - [mm](unclear_mmm_regex)
+    - not clear
+    - idk
+    - not really sure
+    - haven't got a clue
+    - dunno
+    - can't really confirm
+    - not exactly sure
+    
+- intent: inform_NRIC
+  examples: |
+    - [hello](hello_syn) this is my [s7800792c](nric_regex)
+    - [good day](hello_syn) this is my [s6541160b](nric_regex)
+    - here's my NRIC [t1237135g](nric_regex)
+    - [f0099561g](nric_regex)
+    - here it is [s3483645z](nric_regex)
+    - [S91304859Z]
+
+- intent: inform_name
+  examples: |
+    - call me nicholas
+    - my name is [thomas](PERSON)
+    - (PERSON)
+    - hello i am zachary
+    - this is brandan
+    - name is johnathon 
+    - i am lucy
+    - John is my name
+    - [brandan](PERSON)
+    - [akshay](PERSON)
+    - [yiling](PERSON)
+    - [shyam](PERSON)
+    - [xiao hua](PERSON)
+
+- intent: inform_telnum
+  examples: |
+    - [hello](hello_syn) this is my [+6583130141](telnum_regex)
+    - [hi](hello_syn) this is my [+6591234567](telnum_regex)
+    - here's my number [+6597748143](telnum_regex)
+    - [+6581112223](telnum_regex)
+    - here it is [+6593341185](telnum_regex)
+    - number [+6581403243](telnum_regex)
+
+- intent: inform_email
+  examples: |
+    - [example@gmail.com](email)
+    - [innovationlabs@gmail.com](email)
+    - [outlook@outlook.com](email)
+    - my email address is [johndoe@dxc.com](email)
+    - the address is [nicholaskangjing.ang@yahoo.com](email)
+    - [tan@hotmail.com](email)
+    - email [insurance@outlook.com](email)
+
+# *******************************************--=||| EXPERIMENTAL |||=--*******************************************
+# - intent: ask_admin_conversations
+#   examples: |
+#     - show me the chatlogs today
+#     - show conversations today
+#     - i want to see the log files for today
+#     - can i see today's conversations
+#     - i wanna look at your chat logs
+#     - let's see the log files
+#     - let's take a look at chat logs
+#     - i need to see our conversation logs
+#     - let me look at the chat files toda  y
+
+# - intent: escalate_manager
+#   examples: |
+#     - i wanna speak with your manager
+#     - I would like to escalate
+#     - let me talk to a human agent
+#     - i need to speak to someone in charge
+#     - put me through to your boss
+#     - i want to talk to your boss
+#     - where is the manager I want to speak with him
+#     - put me through to the manager
+#     - can i speak to your boss now
+#     - your boss. i need to speak to him now
+#     - where is your department lead
+#     - i need to speak to the person in charge urgently
+
+
+# ---------------------------------------------=||| OUT OF SCOPE |||=------------------------------------------------
+# intents sourced from real conversations that might be relevant in the future
+# - intent: out_of_scope
+#   examples: |
+#     - I want to order food
+#     - what is 2 + 2
+#     - who's the US President  
+#     - i want to know how much money i have in the bank
+#     - how much money do i have in the bank
+#     - what is my bank credit
+#     - do i have enough money in the bank
+#     - i need to check my bank balance 
+
+
+# NOT NEEDED FROM PREVIOUS COE PROJECT
+# LTA: Top FAQs COE Bidding.docx - User Intent [1]
+# - intent: ask_bid_COE_howto
+#   examples: |
+#     - how do i bid for [COE](COE_syn)
+#     - i would like to bid for [cert of entitlement](COE_syn)
+#     - i wanna bid for [c o e](COE_syn)
+#     - please show me how to bid for [certificate of entitlement](COE_syn)
+#     - help me bid [coe](COE_syn)
+#     - i would like to know how to bid for [cert of entitlemnt](COE_syn)
+#     - where can i get [coe](COE_syn)
+#     - what do i need to do to bid for [coe](COE_syn)
+#     - i am trying to get a [coe](COE_syn). what do i do
+#     - how do i acquire a [COE](COE_syn)
+
+# - intent: inform_bid_COE_for_myself
+#   examples: |
+#     - [myself](myself_syn)
+#     - just for [myself](myself_syn) only
+#     - [me](myself_syn)
+#     - [I](myself_syn)
+#     - only for [myself](myself_syn)
+#     - just [me](myself_syn) only
+#     - under [my name](myself_syn)
+#     - [I](myself_syn) am bidding for Myself
+#     - it'll be for [myself](myself_syn)
+
+# - intent: inform_bid_COE_for_company
+#   examples: |
+#     - [my company](mycompany_syn)
+#     - just for [the company](mycompany_syn) only
+#     - [company](mycompany_syn)
+#     - [coy](mycompany_syn)
+#     - only for [company](mycompany_syn)
+#     - under [company](mycompany_syn)] only
+#     - on behalf of [my company](mycompany_syn)
+#     - it's for the [company](mycompany_syn)]
+
+# - intent: inform_bid_COE_with_dealer
+#   examples: |
+#     - [motor dealer](mydealer_syn)  
+#     - the [car dealer](mydealer_syn)
+#     - with [dealer](mydealer_syn) only
+#     - going thru a [dealer](mydealer_syn)
+#     - via the [motor dealer](mydealer_syn)
+#     - using my [dealer](mydealer_syn)
+#     - approaching my [motor dealer](mydealer_syn)
+#     - my [car dealer](mydealer_syn) will bid for me
+#     - [agent](mydealer_syn) will bid
+#     - the [agent](mydealer_syn) is bidding
